@@ -1,219 +1,239 @@
-declare const require: any
 import './App.css'
-import { useState, useEffect } from 'react'
+import './corrected-panels.css'
+import React, { useState } from 'react'
+import { useBroadcast } from './context/NewBroadcastContext'
+import { TopBar } from './components/TopBar'
+import { PreviewMonitor } from './components/PreviewMonitor'
+import { ProgramMonitor } from './components/ProgramMonitor'
+import { PinnedScenes } from './components/PinnedScenes'
+import { SourcesPanel } from './components/SourcesPanel'
+import { AudioMixer } from './components/AudioMixer'
+import { LeftNavigation } from './components/LeftNavigation'
+import { LiveSettingsPanel } from './components/LiveSettingsPanel'
+import { SystemOverviewPanel } from './components/SystemOverviewPanel'
+import { BroadcastHealthPanel } from './components/BroadcastHealthPanel'
+import { TransitionControlsExtended } from './components/TransitionControlsExtended'
+import { AnalyticsPanel } from './components/AnalyticsPanel'
+import { AiCopilotPanel } from './components/AiCopilotPanel'
+import { TransitionTBar } from './components/TransitionTBar'
+import { Hexagon } from 'lucide-react'
+import { MultitrackTimeline } from './components/MultitrackTimeline'
 
-export default function App() {
-  const [sources, setSources] = useState<any[]>([])
-  const [selectedSource, setSelectedSource] = useState<string | null>(null)
-  const [activeScene, setActiveScene] = useState('camera')
+function WorkspaceShell() {
+  const { transitionType, setTransitionType, transitionDuration, setTransitionDuration, isTransitioning, cutTransition, autoTransition, takeLive } = useBroadcast()
+  const [expandedUtility, setExpandedUtility] = useState<'transitions' | 'system' | 'health' | 'analytics' | null>(null)
+  const [copilotVisible, setCopilotVisible] = useState(true)
 
-  useEffect(() => {
-    loadSources()
-  }, [])
-const loadSources = async () => {
-  const result = await require('electron')
-    .ipcRenderer
-    .invoke('get-sources')
-
-  console.log(result)
-
- setSources(
-  result.filter(
-    (source: any) =>
-      source.name &&
-      source.name !== 'DesktopWindowXamlSource'
-  )
-)
-}
-const selectSource = async (sourceId: string) => {
-  setSelectedSource(sourceId)
-
-    try {
-    const stream = await (navigator.mediaDevices as any).getUserMedia({
-  audio: false,
-  video: {
-    mandatory: {
-      chromeMediaSource: 'desktop',
-      chromeMediaSourceId: sourceId
+  const handleNavigate = (id: string) => {
+    if (id === 'analytics') {
+      setExpandedUtility('analytics')
+      return
     }
-  }
-})
-
-    const video = document.getElementById(
-      'preview-video'
-    ) as HTMLVideoElement
-
-    if (video) {
-      video.srcObject = stream
-      await video.play()
+    if (id === 'copilot') {
+      setCopilotVisible(prev => !prev)
+      return
     }
-  } catch (err) {
-    console.error(err)
-  }
-}
-  const startCapture = async () => {
-  try {
-
-    const stream = await (navigator.mediaDevices as any).getUserMedia({
-      video: {
-        mandatory: {
-          chromeMediaSource: 'desktop'
-        }
-      }
-    })
-
-    const video = document.getElementById(
-      'preview-video'
-    ) as HTMLVideoElement
-
-    if (video) {
-      video.srcObject = stream
-      await video.play()
+    if (id === 'dashboard') setExpandedUtility(null)
+    const selector: Record<string, string> = {
+      playout: '.multitrack-panel',
+      live_sources: '.source-library',
+      settings: '.live-settings-panel'
     }
-
-  } catch (err) {
-    console.error(err)
-    alert(JSON.stringify(err))
+    const target = selector[id] ? document.querySelector(selector[id]) : null
+    target?.scrollIntoView({ block: 'nearest', inline: 'nearest' })
   }
-}
 
   return (
-    <div className="app">
+    <div className="app app-background" style={{ display: 'grid', gridTemplateRows: '48px 1fr', width: '100%', height: '100vh', overflow: 'hidden', padding: '0', gap: '0', boxSizing: 'border-box', borderTop: 'none', outline: 'none' }}>
 
-      <div className="topbar">
+      {/* ROW 1: TOP HEADER (48px) */}
+      <div id="top-header-row" className="app-drag-region" style={{ boxSizing: 'border-box', position: 'relative', height: '48px', minHeight: '48px', maxHeight: '48px', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', overflow: 'hidden', zIndex: 1000, background: 'var(--bg-header)', borderTop: 'none', borderBottom: '1px solid var(--border-color)', padding: '8px 16px', gap: '16px' }}>
 
-        <h1>Broadcast Suite</h1>
-
-        <div className="controls">
-
-          <button
-            className="stream-btn"
-            onClick={startCapture}
-          >
-            START STREAM
-          </button>
-
-          <button className="record-btn">
-            START RECORDING
-          </button>
-
+        {/* LEFT BRANDING */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <div style={{ width: '32px', height: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <Hexagon size={32} stroke="var(--accent-blue)" strokeWidth={2} style={{ filter: 'none' }} />
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1 }}>
+            <span style={{ color: '#fff', fontSize: '20px', fontWeight: 700 }}>NEXUS</span>
+            <span style={{ color: '#8b93a7', fontSize: '9px', fontWeight: 700, letterSpacing: '0.05em', marginTop: '1.5px' }}>BROADCAST SUITE</span>
+          </div>
         </div>
 
+        <TopBar />
       </div>
 
-      <div className="main-layout">
+      {/* MIDDLE ZONE */}
+      <div id="middle-zone" style={{ display: 'flex', flexDirection: 'row', height: '100%', width: '100%', overflow: 'hidden', background: 'transparent' }}>
+        
+        {/* LEFT NAVIGATION */}
+        <LeftNavigation
+          onNavigate={handleNavigate}
+          copilotActive={copilotVisible}
+          onToggleCopilot={() => setCopilotVisible(v => !v)}
+        />
 
-        <div className="sidebar">
+        {/* INDEPENDENT WORKSPACE LAYOUT */}
+        <div className="workspace-shell" style={{
+          flex: 1,
+          minWidth: 0,
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '6px',
+          padding: '6px',
+          height: '100%',
+          overflow: 'hidden',
+          boxSizing: 'border-box',
+          position: 'relative'
+        }}>
+          
+          {/* 3-COLUMN BROADCAST LAYOUT */}
+          <div className="broadcast-layout" style={{ display: 'flex', flex: 1, minHeight: 0, gap: '6px', width: '100%', overflow: 'hidden' }}>
 
-          <h2>Scenes</h2>
+            {/* LEFT COLUMN */}
+            <div className="workspace-left" style={{ flex: 18, display: 'flex', flexDirection: 'column', gap: '6px', minWidth: '220px', height: '100%', overflow: 'hidden' }}>
+              <div className="depth-layer-2" style={{ flex: copilotVisible ? 44 : 60, display: 'flex', overflow: 'hidden' }}>
+                <PinnedScenes />
+              </div>
+              <div className="depth-layer-2" style={{ flex: copilotVisible ? 30 : 40, display: 'flex', overflow: 'hidden' }}>
+                <LiveSettingsPanel />
+              </div>
+              {copilotVisible && (
+                <div className="depth-layer-2" style={{ flex: 26, display: 'flex', overflow: 'hidden', minHeight: '140px' }}>
+                  <AiCopilotPanel />
+                </div>
+              )}
+            </div>
 
-          <div
-  className={activeScene === 'camera' ? 'scene active' : 'scene'}
-  onClick={() => setActiveScene('camera')}
->
-  📹 Camera 1
-</div>
+            {/* CENTER COLUMN */}
+            <div className="workspace-center" style={{ flex: 58, display: 'flex', flexDirection: 'column', gap: '6px', minWidth: 0, height: '100%', overflow: 'hidden' }}>
+              {/* Monitors & Transition Controls */}
+              <div className="monitor-stack" style={{ flex: 50, display: 'flex', flexDirection: 'column', gap: '6px', minHeight: 0 }}>
+                <div style={{ flex: 1, display: 'flex', gap: '6px', minHeight: 0 }}>
+                  <PreviewMonitor />
+                  <TransitionTBar />
+                  <ProgramMonitor />
+                </div>
+                {/* Transition Buttons */}
+                <div style={{ height: '28px', flexShrink: 0, width: '100%', display: 'flex', gap: '12px', alignItems: 'center', justifyContent: 'center' }}>
+                  <div style={{ display: 'flex', gap: '4px' }}>
+                    {(['cut', 'mix', 'dip', 'wipe', 'push', 'zoom'] as const).map(t => (
+                      <button key={t} className="hardware-button" disabled={isTransitioning} aria-pressed={transitionType === t} onClick={() => t === 'cut' ? cutTransition() : setTransitionType(t)} style={{ 
+                        width: '48px',
+                        background: transitionType === t ? '#1f6fe0' : undefined,
+                        color: transitionType === t ? '#ffffff' : undefined,
+                        border: transitionType === t ? 'none' : undefined,
+                        fontWeight: transitionType === t ? 800 : undefined,
+                        boxShadow: 'none'
+                      }}>
+                        {t.toUpperCase()}
+                      </button>
+                    ))}
+                  </div>
+                  <div style={{ width: '50px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <select aria-label="Transition duration" value={transitionDuration} disabled={isTransitioning} onChange={event => setTransitionDuration(Number(event.target.value))}>
+                      {[250, 500, 1000, 2000].map(duration => <option key={duration} value={duration}>{duration / 1000}s</option>)}
+                    </select>
+                  </div>
+                  <div style={{ display: 'flex', gap: '6px' }}>
+                    <button className="hardware-button" disabled={isTransitioning} onClick={() => autoTransition()} style={{ width: '80px', background: '#1f6fe0', color: '#ffffff', border: 'none', fontWeight: 800, boxShadow: 'none' }}>AUTO</button>
+                    <button className="hardware-button take-btn" onClick={() => takeLive()} style={{ width: '80px' }}>TAKE</button>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Sources Grid */}
+              <div className="depth-layer-2 source-library-dock" style={{ flex: 19, minHeight: 0, overflow: 'hidden', display: 'flex' }}>
+                <SourcesPanel />
+              </div>
 
-          <div
-  className={activeScene === 'lyrics' ? 'scene active' : 'scene'}
-  onClick={() => setActiveScene('lyrics')}
->
-  🎵 Lyrics
-</div>
+              {/* Multitrack Timeline */}
+              <div className="timeline-dock" style={{ flex: 31, display: 'flex', gap: '6px', minHeight: '190px' }}>
+                 <div className="depth-layer-2" style={{ flex: 1, display: 'flex', overflow: 'hidden' }}>
+                    <MultitrackTimeline />
+                 </div>
+              </div>
+            </div>
 
-          <div
-  className={activeScene === 'announcement' ? 'scene active' : 'scene'}
-  onClick={() => setActiveScene('announcement')}
->
-  📢 Announcement
-</div>
-
-          <h2>Sources</h2>
-
-          <div className="source">
-            📷 Camera Capture
+            {/* RIGHT COLUMN: Audio Mixer on top, followed by 4 collapsible accordion cards */}
+            <div className="workspace-right" style={{ flex: 24, display: 'flex', flexDirection: 'column', gap: '4px', minWidth: '270px', height: '100%', overflow: 'hidden' }}>
+              <div className="depth-layer-2" style={{ flex: 1, minHeight: 0, overflow: 'hidden', display: 'flex', width: '100%' }}>
+                <AudioMixer />
+              </div>
+              {/* 1. Transitions */}
+              <div className="depth-layer-3" style={{ flex: '0 0 auto', display: 'flex', width: '100%' }}>
+                <TransitionControlsExtended expanded={expandedUtility === 'transitions'} onToggle={() => setExpandedUtility(value => value === 'transitions' ? null : 'transitions')} />
+              </div>
+              {/* 2. System Overview */}
+              <div className="depth-layer-3" style={{ flex: '0 0 auto', display: 'flex', width: '100%' }}>
+                <SystemOverviewPanel expanded={expandedUtility === 'system'} onToggle={() => setExpandedUtility(value => value === 'system' ? null : 'system')} />
+              </div>
+              {/* 3. Broadcast Health */}
+              <div className="depth-layer-3" style={{ flex: '0 0 auto', display: 'flex', width: '100%' }}>
+                <BroadcastHealthPanel expanded={expandedUtility === 'health'} onToggle={() => setExpandedUtility(value => value === 'health' ? null : 'health')} />
+              </div>
+              {/* 4. Analytics */}
+              <div className="depth-layer-3" style={{ flex: '0 0 auto', overflow: 'visible', display: 'flex', width: '100%' }}>
+                <AnalyticsPanel expanded={expandedUtility === 'analytics'} onToggle={() => setExpandedUtility(value => value === 'analytics' ? null : 'analytics')} />
+              </div>
+            </div>
           </div>
-{sources.map((source) => (
-  <button
-  key={source.id}
-  className={
-    selectedSource === source.id
-      ? "source-btn active"
-      : "source-btn"
+
+        </div>
+      </div>
+
+    </div>
+  )
+}
+
+class ErrorBoundary extends React.Component<{ children: React.ReactNode }, { hasError: boolean; error: Error | null; errorInfo: React.ErrorInfo | null }> {
+  constructor(props: { children: React.ReactNode }) {
+    super(props);
+    this.state = { hasError: false, error: null, errorInfo: null };
   }
-  onClick={() => selectSource(source.id)}
->
-  {source.name}
-</button>
-))}
-          <div className="source">
-            🌐 Browser Source
-          </div>
 
-          <div className="source">
-            🎬 Media Source
-          </div>
+  static getDerivedStateFromError(error: Error) {
+    return { hasError: true, error };
+  }
 
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    this.setState({ errorInfo });
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div style={{ padding: '12px', background: '#222', color: '#fff', height: '100vh', overflow: 'auto' }}>
+          <h1 style={{ color: '#FF4D5A' }}>Something went wrong.</h1>
+          <details style={{ whiteSpace: 'pre-wrap' }}>
+            {this.state.error && this.state.error.toString()}
+            <br />
+            {this.state.errorInfo && this.state.errorInfo.componentStack}
+          </details>
+          <button onClick={() => window.location.reload()} style={{ marginTop: '12px' }}>Reload application</button>
         </div>
+      );
+    }
+    return this.props.children;
+  }
+}
 
-        <div className="preview-area">
+import { BroadcastProvider } from './context/NewBroadcastContext'
+import { GraphicsCompositor } from './components/GraphicsCompositor'
+import { ToastContainer } from './components/ToastContainer'
 
-          <div className="preview-window">
-
-  {activeScene === 'camera' && (
-    <video
-      id="preview-video"
-      autoPlay
-      muted
-      playsInline
-      style={{
-        width: '100%',
-        height: '100%',
-        objectFit: 'cover'
-      }}
-    />
-  )}
-
-  {activeScene === 'lyrics' && (
-    <div className="lyrics-scene">
-      <h1>Amazing Grace</h1>
-      <p>How sweet the sound</p>
-    </div>
-  )}
-
-  {activeScene === 'announcement' && (
-    <div className="announcement-scene">
-      <h1>Announcement</h1>
-      <p>Service will begin in 10 minutes</p>
-    </div>
-  )}
-
-</div>
-
-</div>
-
-<div className="mixer">
-
-          <h2>Audio Mixer</h2>
-
-          <div className="slider-group">
-            <label>Mic</label>
-            <input type="range" />
-          </div>
-
-          <div className="slider-group">
-            <label>Desktop Audio</label>
-            <input type="range" />
-          </div>
-
-          <div className="slider-group">
-            <label>Music</label>
-            <input type="range" />
-          </div>
-
-        </div>
-
- </div>
-</div>
-)
+export default function App() {
+  try {
+    return (
+      <ErrorBoundary>
+        <BroadcastProvider>
+          <ToastContainer />
+          <GraphicsCompositor />
+          <WorkspaceShell />
+        </BroadcastProvider>
+      </ErrorBoundary>
+    )
+  } catch (err) {
+    return null;
+  }
 }

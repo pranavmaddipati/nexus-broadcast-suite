@@ -1,0 +1,454 @@
+{
+  "generatedAt": "2026-10-12T12:25:40.388Z",
+  "limitations": "Static candidates require runtime and dynamic-reference review before deletion. Handler presence does not prove functionality. Asset references in CSS and string paths are not resolved.",
+  "sourceFiles": 105,
+  "reachableFiles": [
+    "src/App.css",
+    "src/App.tsx",
+    "src/components/AiCopilotPanel.tsx",
+    "src/components/AnalyticsPanel.tsx",
+    "src/components/AudioMixer.tsx",
+    "src/components/BroadcastHealthPanel.tsx",
+    "src/components/ContextMenu.tsx",
+    "src/components/GraphicsCompositor.tsx",
+    "src/components/LeftNavigation.tsx",
+    "src/components/LiveSettingsPanel.tsx",
+    "src/components/MultitrackTimeline.tsx",
+    "src/components/PinnedScenes.tsx",
+    "src/components/PreviewMonitor.tsx",
+    "src/components/ProgramMonitor.tsx",
+    "src/components/SourcesPanel.tsx",
+    "src/components/SystemOverviewPanel.tsx",
+    "src/components/TopBar.tsx",
+    "src/components/TransitionControlsExtended.tsx",
+    "src/components/TransitionTBar.tsx",
+    "src/context/NewBroadcastContext.tsx",
+    "src/corrected-panels.css",
+    "src/engine/CanvasRenderer.ts",
+    "src/engine/MediaManager.ts",
+    "src/engine/RenderScheduler.ts",
+    "src/engine/SceneRenderer.ts",
+    "src/engine/SourceRenderer.ts",
+    "src/engine/TextureManager.ts",
+    "src/engine/input/SourceRegistry.ts",
+    "src/engine/media/FrameSynchronizer.ts",
+    "src/engine/media/MediaCache.ts",
+    "src/engine/media/MediaDecoder.ts",
+    "src/engine/media/MediaEngine.ts",
+    "src/engine/media/MediaRenderer.ts",
+    "src/engine/media/MediaTexture.ts",
+    "src/engine/media/TextureCache.ts",
+    "src/index.css",
+    "src/main.tsx",
+    "src/store/StoreTypes.ts"
+  ],
+  "unreachableCandidates": [
+    "src/assets/broadcast/guest_anchor.jpg",
+    "src/assets/broadcast/news_anchor.jpg",
+    "src/assets/broadcast/news_one.jpg",
+    "src/assets/hero.png",
+    "src/assets/react.svg",
+    "src/assets/vite.svg",
+    "src/components/ActivityLogPanel.tsx",
+    "src/components/AnalyticsPlaceholder.tsx",
+    "src/components/CommandCenterPanel.tsx",
+    "src/components/DeveloperOverlay.tsx",
+    "src/components/DistributionPanel.tsx",
+    "src/components/FiltersPanel.tsx",
+    "src/components/GraphicsDesigner.tsx",
+    "src/components/GraphicsProductionModal.tsx",
+    "src/components/InputSelectionDialog.tsx",
+    "src/components/InspectorPanel.tsx",
+    "src/components/LayersPanel.tsx",
+    "src/components/LiveSettingsModal.tsx",
+    "src/components/LiveSettingsPlaceholder.tsx",
+    "src/components/MacroEditorModal.tsx",
+    "src/components/MacrosPanel.tsx",
+    "src/components/MediaLibrary.tsx",
+    "src/components/MenuBar.tsx",
+    "src/components/NotesPanel.tsx",
+    "src/components/OutputSettingsModal.tsx",
+    "src/components/PanelHeader.tsx",
+    "src/components/PlaylistPanel.tsx",
+    "src/components/PlaylistPanel.tsx.restored",
+    "src/components/ProductionStatusBar.tsx",
+    "src/components/PropertiesPanel.tsx",
+    "src/components/QuickAccessBar.tsx",
+    "src/components/QuickActionsPanel.tsx",
+    "src/components/SceneLibrary.tsx",
+    "src/components/SceneMatrix.tsx",
+    "src/components/SceneRenderer.tsx",
+    "src/components/ShortcutsPanel.tsx",
+    "src/components/SmartToolsPanel.tsx",
+    "src/components/SourceConfigurationPopup.tsx",
+    "src/components/SourceProperties/PropertiesPanels.tsx",
+    "src/components/SourceSettingsModal.tsx",
+    "src/components/StatusBar.tsx",
+    "src/components/StreamSettingsPanel.tsx",
+    "src/components/SystemStatusPanel.tsx",
+    "src/components/TabGroup.tsx",
+    "src/components/TransitionBar.tsx",
+    "src/components/TransitionControls.tsx",
+    "src/components/TransitionEngine.tsx",
+    "src/components/VirtualCameraSettingsModal.tsx",
+    "src/components/VmixInputCard.tsx",
+    "src/components/WorkflowBar.tsx",
+    "src/components/WorkspaceContainer.tsx",
+    "src/context/BroadcastContext.tsx",
+    "src/context/BroadcastContext.tsx.bak",
+    "src/context/BroadcastContext.tsx.restored",
+    "src/engine/TransformManager.ts",
+    "src/engine/input/InputManager.ts",
+    "src/engine/input/MediaLoader.ts",
+    "src/engine/media/MediaPlayer.ts",
+    "src/engine/media/TextureUploader.ts",
+    "src/store/broadcastStore.ts",
+    "src/store/slices/createOutputSlice.ts",
+    "src/store/slices/createPlaybackSlice.ts",
+    "src/store/slices/createRoutingSlice.ts",
+    "src/store/slices/createSceneSlice.ts",
+    "src/store/slices/createSelectionSlice.ts",
+    "src/store/slices/createSourceSlice.ts",
+    "src/store/slices/createTransitionSlice.ts"
+  ],
+  "circularImports": [],
+  "exactDuplicateFiles": [],
+  "unreferencedAssets": [
+    "src/assets/broadcast/guest_anchor.jpg",
+    "src/assets/broadcast/news_anchor.jpg",
+    "src/assets/broadcast/news_one.jpg",
+    "src/assets/hero.png",
+    "src/assets/react.svg",
+    "src/assets/vite.svg"
+  ],
+  "ipc": {
+    "rendererChannels": [
+      "broadcast-capabilities",
+      "get-desktop-stream",
+      "get-sources",
+      "set-next-screen-id",
+      "start-stream-single",
+      "start-virtual-camera",
+      "stop-stream-single",
+      "stop-virtual-camera",
+      "stream-chunk-single",
+      "vcam-chunk"
+    ],
+    "mainChannels": [
+      "broadcast-capabilities",
+      "get-sources",
+      "window-close",
+      "window-maximize",
+      "window-minimize"
+    ],
+    "missingMainHandlers": [
+      "get-desktop-stream",
+      "set-next-screen-id",
+      "start-stream-single",
+      "start-virtual-camera",
+      "stop-stream-single",
+      "stop-virtual-camera",
+      "stream-chunk-single",
+      "vcam-chunk"
+    ],
+    "unusedMainHandlers": [
+      "window-close",
+      "window-maximize",
+      "window-minimize"
+    ]
+  },
+  "importedPackages": [
+    "lucide-react",
+    "react",
+    "react-dom"
+  ],
+  "controlsWithoutDirectHandlers": [
+    {
+      "file": "src/components/FiltersPanel.tsx",
+      "line": 463,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/FiltersPanel.tsx",
+      "line": 472,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/FiltersPanel.tsx",
+      "line": 473,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/FiltersPanel.tsx",
+      "line": 475,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/GraphicsProductionModal.tsx",
+      "line": 152,
+      "tag": "select"
+    },
+    {
+      "file": "src/components/GraphicsProductionModal.tsx",
+      "line": 173,
+      "tag": "select"
+    },
+    {
+      "file": "src/components/GraphicsProductionModal.tsx",
+      "line": 183,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/GraphicsProductionModal.tsx",
+      "line": 186,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/InspectorPanel.tsx",
+      "line": 285,
+      "tag": "select"
+    },
+    {
+      "file": "src/components/LiveSettingsPlaceholder.tsx",
+      "line": 20,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/LiveSettingsPlaceholder.tsx",
+      "line": 21,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/MacroEditorModal.tsx",
+      "line": 56,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/MacroEditorModal.tsx",
+      "line": 113,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/MacroEditorModal.tsx",
+      "line": 141,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/MacroEditorModal.tsx",
+      "line": 156,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/QuickAccessBar.tsx",
+      "line": 9,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/QuickAccessBar.tsx",
+      "line": 10,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/QuickAccessBar.tsx",
+      "line": 11,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/QuickAccessBar.tsx",
+      "line": 16,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/QuickAccessBar.tsx",
+      "line": 17,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/QuickAccessBar.tsx",
+      "line": 18,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/QuickAccessBar.tsx",
+      "line": 19,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/QuickAccessBar.tsx",
+      "line": 24,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/QuickAccessBar.tsx",
+      "line": 25,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/StreamSettingsPanel.tsx",
+      "line": 79,
+      "tag": "select"
+    },
+    {
+      "file": "src/components/StreamSettingsPanel.tsx",
+      "line": 93,
+      "tag": "select"
+    },
+    {
+      "file": "src/components/StreamSettingsPanel.tsx",
+      "line": 101,
+      "tag": "select"
+    },
+    {
+      "file": "src/components/StreamSettingsPanel.tsx",
+      "line": 109,
+      "tag": "select"
+    },
+    {
+      "file": "src/components/StreamSettingsPanel.tsx",
+      "line": 116,
+      "tag": "select"
+    },
+    {
+      "file": "src/components/StreamSettingsPanel.tsx",
+      "line": 134,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/StreamSettingsPanel.tsx",
+      "line": 137,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/StreamSettingsPanel.tsx",
+      "line": 140,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/TransitionBar.tsx",
+      "line": 47,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/TransitionBar.tsx",
+      "line": 68,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/TransitionControlsExtended.tsx",
+      "line": 60,
+      "tag": "select"
+    },
+    {
+      "file": "src/components/TransitionControlsExtended.tsx",
+      "line": 68,
+      "tag": "select"
+    }
+  ],
+  "emptyFunctions": [
+    {
+      "file": "src/components/FiltersPanel.tsx",
+      "line": 51
+    },
+    {
+      "file": "src/components/FiltersPanel.tsx",
+      "line": 51
+    },
+    {
+      "file": "src/components/FiltersPanel.tsx",
+      "line": 51
+    },
+    {
+      "file": "src/components/FiltersPanel.tsx",
+      "line": 51
+    },
+    {
+      "file": "src/components/InspectorPanel.tsx",
+      "line": 455
+    },
+    {
+      "file": "src/components/InspectorPanel.tsx",
+      "line": 456
+    },
+    {
+      "file": "src/components/InspectorPanel.tsx",
+      "line": 456
+    },
+    {
+      "file": "src/components/InspectorPanel.tsx",
+      "line": 456
+    },
+    {
+      "file": "src/components/InspectorPanel.tsx",
+      "line": 456
+    },
+    {
+      "file": "src/components/InspectorPanel.tsx",
+      "line": 456
+    },
+    {
+      "file": "src/components/LiveSettingsModal.tsx",
+      "line": 12
+    },
+    {
+      "file": "src/components/LiveSettingsModal.tsx",
+      "line": 12
+    },
+    {
+      "file": "src/components/PlaylistPanel.tsx",
+      "line": 14
+    },
+    {
+      "file": "src/components/PlaylistPanel.tsx",
+      "line": 15
+    },
+    {
+      "file": "src/components/ShortcutsPanel.tsx",
+      "line": 6
+    },
+    {
+      "file": "src/components/ShortcutsPanel.tsx",
+      "line": 6
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 391
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 1762
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 1889
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 1890
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 1891
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 2045
+    },
+    {
+      "file": "src/engine/media/FrameSynchronizer.ts",
+      "line": 62
+    },
+    {
+      "file": "src/engine/media/FrameSynchronizer.ts",
+      "line": 91
+    },
+    {
+      "file": "src/engine/media/FrameSynchronizer.ts",
+      "line": 142
+    },
+    {
+      "file": "src/engine/media/MediaDecoder.ts",
+      "line": 82
+    }
+  ],
+  "diagnostics": []
+}

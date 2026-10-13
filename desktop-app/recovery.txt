@@ -1,0 +1,299 @@
+Created At: 2026-07-21T10:36:47Z
+Completed At: 2026-07-21T10:36:47Z
+File Path: `file:///c:/broadcast-suite3/desktop-app/src/components/SourcesPanel.tsx`
+Total Lines: 614
+Total Bytes: 29922
+Showing lines 1 to 614
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+1: import React, { useState } from 'react'
+2: import { useBroadcast } from '../context/BroadcastContext'
+3: import type { SceneSource } from '../context/BroadcastContext'
+4: import { Plus, Trash2, Eye, EyeOff, Lock, Unlock, ArrowUp, ArrowDown, Settings, Play, Pause, X, Sliders, Monitor, Copy, Crop } from 'lucide-react'
+5: import { ContextMenu } from './ContextMenu'
+6: import type { ContextMenuItem } from './ContextMenu'
+7: import { FiltersPanelDock } from './FiltersPanel'
+8: 
+9: export const SourcesPanel: React.FC = () => {
+10:   const { scenes = [], activeScene, addSourceToScene = () => {}, deleteSourceFromScene = () => {}, updateSourceProperties = () => {}, reorderSource = () => {}, videoElements = [], selectedSourceIds = [], toggleSourceSelection = () => {}, setSelectedSourceIds = () => {}, clipboardSource, setClipboardSource, clipboardFilters, setClipboardFilters } = useBroadcast()
+11: 
+12:   const currentScene = (scenes || []).find(s => s.id === activeScene)
+13:   const sources = currentScene?.sources || []
+14: 
+15:   const [contextMenuSourceId, setContextMenuSourceId] = useState<string | null>(null)
+16:   const [menuPos, setMenuPos] = useState({ x: 0, y: 0 })
+17: 
+18:   const [hoveredScrubberId, setHoveredScrubberId] = useState<string | null>(null)
+19:   const [showAddMenu, setShowAddMenu] = useState(false)
+20:   const [showCreateDialog, setShowCreateDialog] = useState<{ type: SceneSource['type']; defaultName: string } | null>(null)
+21:   const [createSourceName, setCreateSourceName] = useState('')
+22: 
+23:   // Periodically poll video playback times & durations
+<truncated 29325 bytes>
+tion: () => {} },
+579:             { label: 'Rotate 90 CW', action: () => {
+580:               const src = sources.find(s => s.id === contextMenuSourceId)
+581:               if (src) updateSourceProperties(activeScene, src.id, { settings: { ...src.settings, rotation: (src.settings?.rotation || 0) + 90 } })
+582:             }},
+583:             { label: 'Flip Horizontal', action: () => {
+584:               const src = sources.find(s => s.id === contextMenuSourceId)
+585:               if (src) updateSourceProperties(activeScene, src.id, { settings: { ...src.settings, flipHorizontal: !src.settings?.flipHorizontal } })
+586:             }},
+587:             { label: 'Flip Vertical', action: () => {
+588:               const src = sources.find(s => s.id === contextMenuSourceId)
+589:               if (src) updateSourceProperties(activeScene, src.id, { settings: { ...src.settings, flipVertical: !src.settings?.flipVertical } })
+590:             }},
+591:             { label: '', separator: true, action: () => {} },
+592:             { label: 'Interact (Browser)', action: () => setSelectedSourceIds([contextMenuSourceId]) },
+593:             { label: 'Refresh Browser', action: () => {} },
+594:             { label: 'Open File Location', action: () => {} },
+595:             { label: 'Create Nested Scene', action: () => {} },
+596:             { label: '', separator: true, action: () => {} },
+597:             {
+598:               label: 'Delete',
+599:               icon: <Trash2 size={12} />,
+600:               action: () => {
+601:                 const idsToDelete = selectedSourceIds.includes(contextMenuSourceId) ? selectedSourceIds : [contextMenuSourceId]
+602:                 idsToDelete.forEach(id => deleteSourceFromScene(activeScene, id))
+603:               },
+604:               danger: true
+605:             },
+606:           ]}
+607:         />
+608:       )}
+609:     </div>
+610:   )
+611: }
+612: 
+613: export default React.memo(SourcesPanel)
+614: 
+The above content shows the entire, complete file contents of the requested file.
+
+======
+Created At: 2026-07-21T10:38:34Z
+Completed At: 2026-07-21T10:38:36Z
+The following changes were made by the multi_replace_file_content tool to: c:\broadcast-suite3\desktop-app\src\components\SourcesPanel.tsx. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -7,7 +7,7 @@
+ import { FiltersPanelDock } from './FiltersPanel'
+ 
+ export const SourcesPanel: React.FC = () => {
+-  const { scenes = [], activeScene, addSourceToScene = () => {}, deleteSourceFromScene = () => {}, updateSourceProperties = () => {}, reorderSource = () => {}, videoElements = [], selectedSourceIds = [], toggleSourceSelection = () => {}, setSelectedSourceIds = () => {}, clipboardSource, setClipboardSource, clipboardFilters, setClipboardFilters } = useBroadcast()
++  const { scenes = [], activeScene, addSourceToScene = () => {}, deleteSourceFromScene = () => {}, updateSourceProperties = () => {}, reorderSource = () => {}, videoElements = [], selectedSourceIds = [], toggleSourceSelection = () => {}, setSelectedSourceIds = () => {}, clipboardSource, setClipboardSource, clipboardFilters, setClipboardFilters, clipboardSourceTransform, setClipboardSourceTransform } = useBroadcast()
+ 
+   const currentScene = (scenes || []).find(s => s.id === activeScene)
+   const sources = currentScene?.sources || []
+@@ -564,13 +564,13 @@
+             }},
+             { label: 'Copy Transform', action: () => {
+               const src = sources.find(s => s.id === contextMenuSourceId)
+-              if (src) setClipboardSource({ ...src, id: 'transform_copy' }) // hack to store transform
++              if (src) setClipboardSourceTransform({ x: src.x, y: src.y, width: src.width, height: src.height, opacity: src.opacity, rotation: src.settings?.rotation, scaleX: src.settings?.scaleX, scaleY: src.settings?.scaleY })
+             }},
+             { label: 'Paste Transform', action: () => {
+-              if (clipboardSource && clipboardSource.id === 'transform_copy') {
++              if (clipboardSourceTransform) {
+                 updateSourceProperties(activeScene, contextMenuSourceId, { 
+-                  x: clipboardSource.x, y: clipboardSource.y, width: clipboardSource.width, height: clipboardSource.height,
+-                  settings: { ...sources.find(s => s.id === contextMenuSourceId)?.settings, rotation: clipboardSource.settings?.rotation, scaleX: clipboardSource.settings?.scaleX, scaleY: clipboardSource.settings?.scaleY }
++                  x: clipboardSourceTransform.x, y: clipboardSourceTransform.y, width: clipboardSourceTransform.width, height: clipboardSourceTransform.height, opacity: clipboardSourceTransform.opacity,
++                  settings: { ...sources.find(s => s.id === contextMenuSourceId)?.settings, rotation: clipboardSourceTransform.rotation, scaleX: clipboardSourceTransform.scaleX, scaleY: clipboardSourceTransform.scaleY }
+                 })
+               }
+             }},
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.
+======
+Created At: 2026-07-21T10:58:56Z
+Completed At: 2026-07-21T10:58:56Z
+File Path: `file:///c:/broadcast-suite3/desktop-app/src/components/SourcesPanel.tsx`
+Total Lines: 614
+Total Bytes: 30145
+Showing lines 1 to 100
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+1: import React, { useState } from 'react'
+2: import { useBroadcast } from '../context/BroadcastContext'
+3: import type { SceneSource } from '../context/BroadcastContext'
+4: import { Plus, Trash2, Eye, EyeOff, Lock, Unlock, ArrowUp, ArrowDown, Settings, Play, Pause, X, Sliders, Monitor, Copy, Crop } from 'lucide-react'
+5: import { ContextMenu } from './ContextMenu'
+6: import type { ContextMenuItem } from './ContextMenu'
+7: import { FiltersPanelDock } from './FiltersPanel'
+8: 
+9: export const SourcesPanel: React.FC = () => {
+10:   const { scenes = [], activeScene, addSourceToScene = () => {}, deleteSourceFromScene = () => {}, updateSourceProperties = () => {}, reorderSource = () => {}, videoElements = [], selectedSourceIds = [], toggleSourceSelection = () => {}, setSelectedSourceIds = () => {}, clipboardSource, setClipboardSource, clipboardFilters, setClipboardFilters, clipboardSourceTransform, setClipboardSourceTransform } = useBroadcast()
+11: 
+12:   const currentScene = (scenes || []).find(s => s.id === activeScene)
+13:   const sources = currentScene?.sources || []
+14: 
+15:   const [contextMenuSourceId, setContextMenuSourceId] = useState<string | null>(null)
+16:   const [menuPos, setMenuPos] = useState({ x: 0, y: 0 })
+17: 
+18:   const [hoveredScrubberId, setHoveredScrubberId] = useState<string | null>(null)
+19:   const [showAddMenu, setShowAddMenu] = useState(false)
+20:   const [showCreateDialog, setShowCreateDialog] = useState<{ type: SceneSource['type']; defaultName: string } | null>(null)
+21:   const [createSourceName, setCreateSourceName] = useState('')
+22: 
+23: 
+<truncated 1555 bytes>
+type: 'video', label: 'Video File' },
+60:     { type: 'vlc_source', label: 'VLC Video Source' },
+61:     { type: 'slideshow', label: 'Image Slide Show' },
+62:     { type: 'pdf', label: 'PDF Document' },
+63:     { type: 'text', label: 'Text Source (GDI+)' },
+64:     { type: 'clock', label: 'Live Clock' },
+65:     { type: 'countdown_timer', label: 'Countdown Timer' },
+66:     { type: 'html_overlay', label: 'HTML Overlay' },
+67:     { type: 'color_source', label: 'Color Source' },
+68:     { type: 'display_capture', label: 'Display Capture (Screen)' },
+69:     { type: 'window_capture', label: 'Window Capture' },
+70:     { type: 'game_capture', label: 'Game Capture' },
+71:     { type: 'rtmp_source', label: 'RTMP Stream Input' },
+72:     { type: 'virtual_camera', label: 'Virtual Camera Feed' },
+73:     { type: 'lyrics', label: 'Lyrics Engine Overlay' },
+74:     { type: 'custom', label: 'Custom Source' }
+75:   ]
+76: 
+77:   const handleAddSource = (type: SceneSource['type']) => {
+78:     const defaultName = `${type.toUpperCase()} Source ${sources?.length + 1}`
+79:     setCreateSourceName(defaultName)
+80:     setShowCreateDialog({ type, defaultName })
+81:     setShowAddMenu(false)
+82:   }
+83: 
+84:   
+85:   const handleContextMenu = (e: React.MouseEvent, sourceId: string) => {
+86:     e.preventDefault()
+87:     setContextMenuSourceId(sourceId)
+88:     setMenuPos({ x: e.clientX, y: e.clientY })
+89:   }
+90: 
+91:   React.useEffect(() => {
+92:     const closeMenu = () => setContextMenuSourceId(null)
+93:     window.addEventListener('click', closeMenu)
+94:     return () => window.removeEventListener('click', closeMenu)
+95:   }, [])
+96: 
+97:   const handleCreateSourceSubmit = (e: React.FormEvent) => {
+98:     e.preventDefault()
+99:     if (!showCreateDialog) return
+100:     const nameToUse = createSourceName.trim() || showCreateDialog.defaultName
+The above content does NOT show the entire file contents. If you need to view any lines of the file which were not shown to complete your task, call this tool again to view those lines.
+
+======
+Created At: 2026-07-21T11:29:49Z
+Completed At: 2026-07-21T11:29:49Z
+File Path: `file:///c:/broadcast-suite3/desktop-app/src/components/SourcesPanel.tsx`
+Total Lines: 788
+Total Bytes: 35830
+Showing lines 1 to 250
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+1: import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react'
+2: import { useBroadcast } from '../context/BroadcastContext'
+3: import type { SceneSource } from '../context/BroadcastContext'
+4: import { 
+5:   Plus, Trash2, Eye, EyeOff, Lock, Unlock, ArrowUp, ArrowDown, Settings, 
+6:   Copy, FolderPlus, Palette, Video, Image as ImageIcon, Globe, Type, Monitor,
+7:   Mic, PlaySquare, Radio, Film, ImagePlus, FileAudio, Folder, FolderOpen,
+8:   Link, Sliders, Volume2, VolumeX, Search, SortAsc, Activity
+9: } from 'lucide-react'
+10: import { ContextMenu } from './ContextMenu'
+11: 
+12: // --- Types & Colors ---
+13: type SortMode = 'manual' | 'name' | 'type' | 'recently_added' | 'live'
+14: 
+15: const getSourceColor = (type: string) => {
+16:   switch (type) {
+17:     case 'camera': return '#3b82f6' // Blue
+18:     case 'media':
+19:     case 'video':
+20:     case 'media_playlist':
+21:     case 'vlc_source': return '#a855f7' // Purple
+22:     case 'audio': return '#f97316' // Orange
+23:     case 'browser': return '#22c55e' // Green
+24:     case 'image':
+25:     case 'slideshow': return '#06b6d4' // Cyan
+26:     case 'ndi': return '#14b8a6' // Teal
+27:     case 'rtmp_source':
+28:     case 'custom': return '#ef4444' // Red (assuming RTSP is mapped to custom)
+29:     case 'text':
+30:     case 'lyrics': return '#eab308' // Yellow
+31:     case 'group': return '#94a3b8' // Slate
+32:     default: return '#64748b'
+33:   }
+34: }
+35: 
+36: const getSourceIcon = (type: string) => {
+37:   const color = getSourceColor(type)
+38:   switch (type) {
+39:     case 'camera': retu
+<truncated 7880 bytes>
+
+216:           {resolution !== '-' && <span>{resolution}</span>}
+217:           {fps !== '-' && <span>{fps} FPS</span>}
+218:         </div>
+219:       </div>
+220: 
+221:       {/* Action Buttons */}
+222:       <div style={{ display: 'flex', alignItems: 'center', gap: '2px', paddingRight: '8px' }} onClick={e => e.stopPropagation()}>
+223:         {isAudioCapable && (
+224:           <button className="icon-btn-small" style={{ padding: '6px', background: 'transparent', border: 'none', cursor: 'pointer' }} onClick={() => onToggleMute(source.id)} title={source.muted ? 'Unmute' : 'Mute'}>
+225:             {source.muted ? <VolumeX size={14} color="#ef4444" /> : <Volume2 size={14} color="#94a3b8" />}
+226:           </button>
+227:         )}
+228:         <button className="icon-btn-small" style={{ padding: '6px', background: 'transparent', border: 'none', cursor: 'pointer' }} onClick={() => onToggleLock(source.id)} title={source.locked ? 'Unlock' : 'Lock'}>
+229:           {source.locked ? <Lock size={14} color="#ef4444" /> : <Unlock size={14} color="#94a3b8" />}
+230:         </button>
+231:         <button className="icon-btn-small" style={{ padding: '6px', background: 'transparent', border: 'none', cursor: 'pointer' }} onClick={() => onToggleVisibility(source.id)} title={source.visible ? 'Hide' : 'Show'}>
+232:           {source.visible ? <Eye size={14} color="#94a3b8" /> : <EyeOff size={14} color="#475569" />}
+233:         </button>
+234:       </div>
+235:     </div>
+236:   )
+237: })
+238: SourceCard.displayName = 'SourceCard'
+239: 
+240: 
+241: // --- Main Component ---
+242: export const SourcesPanel: React.FC = () => {
+243:   const { 
+244:     scenes = [], 
+245:     setScenes = () => {}, 
+246:     activeScene,
+247:     liveScene,
+248:     saveStateForUndo = () => {},
+249:     selectedSourceIds = [], 
+250:     setSelectedSourceIds = () => {},
+The above content does NOT show the entire file contents. If you need to view any lines of the file which were not shown to complete your task, call this tool again to view those lines.
+
+======
+Created At: 2026-07-21T11:36:26Z
+Tool is running as a background task with task id: ab7095fc-d8b2-4a3d-bb24-684f2a97050a/task-753
+Task Description: node -e "
+const fs = require('fs');
+const path = 'C:/Users/abhin/.gemini/antigravity-ide/brain/ab7095fc-d8b2-4a3d-bb24-684f2a97050a/.system_generated/logs/transcript.jsonl';
+const lines = fs.readFileSync(path, 'utf8').split('\n');
+
+for (const line of lines) {
+  if (!line) continue;
+  try {
+    const obj = JSON.parse(line);
+    
+    // In transcript.jsonl, the tool responses are in content array
+    if (obj.content) {
+      if (typeof obj.content === 'string') {
+        if (obj.content.includes('SourcesPanel.tsx') && obj.content.includes('export const SourcesPanel: React.FC = () => {')) {
+           fs.appendFileSync('c:/broadcast-suite3/desktop-app/recovery.txt', obj.content + '\n======\n');
+        }
+      } else if (Array.isArray(obj.content)) {
+        for (const item of obj.content) {
+          if (item.type === 'tool_result' && item.output && item.output.includes('SourcesPanel.tsx')) {
+             fs.appendFileSync('c:/broadcast-suite3/desktop-app/recovery.txt', item.output + '\n======\n');
+          }
+        }
+      }
+    }
+  } catch(e) {}
+}
+"
+Task logs are available at: file:///C:/Users/abhin/.gemini/antigravity-ide/brain/ab7095fc-d8b2-4a3d-bb24-684f2a97050a/.system_generated/tasks/task-753.log
+======

@@ -4,9 +4,14 @@
   "private": true,
   "main": "electron/main.js",
   "scripts": {
+    "test": "node --test tests/*.test.cjs",
+    "audit:source": "node scripts/audit.cjs",
+    "typecheck": "tsc -b --pretty false",
+    "build": "vite build",
     "vite": "vite",
-    "electron": "electron .",
-    "dev": "concurrently \"npm run vite\" \"wait-on http://localhost:5173 && npm run electron\""
+    "electron": "node scripts/start-electron.cjs",
+    "electron:inspect": "cross-env NEXUS_REMOTE_DEBUG_PORT=9223 node scripts/start-electron.cjs",
+    "dev": "concurrently \"npm run vite\" \"wait-on http://localhost:5180 && npm run electron\""
   },
   "dependencies": {
     "clsx": "^2.1.1",
@@ -14,12 +19,17 @@
     "cross-env": "^10.0.0",
     "electron": "^37.1.0",
     "lucide-react": "^0.525.0",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
     "react-resizable-panels": "^3.0.3",
     "tailwindcss": "^4.1.11",
     "vite": "^7.0.0",
     "wait-on": "^8.0.4"
+  },
+  "overrides": {
+    "concurrently": {
+      "shell-quote": "^1.11.0"
+    }
   },
   "devDependencies": {
     "@types/react": "^19.1.2",

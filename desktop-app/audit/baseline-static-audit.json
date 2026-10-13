@@ -1,0 +1,3348 @@
+{
+  "generatedAt": "2026-10-06T14:57:29.877Z",
+  "limitations": "Static candidates require runtime and dynamic-reference review before deletion. Handler presence does not prove functionality. Asset references in CSS and string paths are not resolved.",
+  "sourceFiles": 102,
+  "reachableFiles": [
+    "src/App.css",
+    "src/App.tsx",
+    "src/components/ActivityLogPanel.tsx",
+    "src/components/AiCopilotPanel.tsx",
+    "src/components/AnalyticsPlaceholder.tsx",
+    "src/components/AudioMixer.tsx",
+    "src/components/BroadcastHealthPanel.tsx",
+    "src/components/CommandCenterPanel.tsx",
+    "src/components/ContextMenu.tsx",
+    "src/components/DeveloperOverlay.tsx",
+    "src/components/DistributionPanel.tsx",
+    "src/components/GraphicsCompositor.tsx",
+    "src/components/GraphicsDesigner.tsx",
+    "src/components/GraphicsProductionModal.tsx",
+    "src/components/InspectorPanel.tsx",
+    "src/components/LayersPanel.tsx",
+    "src/components/LeftNavigation.tsx",
+    "src/components/LiveSettingsModal.tsx",
+    "src/components/LiveSettingsPanel.tsx",
+    "src/components/LiveSettingsPlaceholder.tsx",
+    "src/components/MacroEditorModal.tsx",
+    "src/components/MediaLibrary.tsx",
+    "src/components/MenuBar.tsx",
+    "src/components/MultitrackTimeline.tsx",
+    "src/components/NotesPanel.tsx",
+    "src/components/OutputSettingsModal.tsx",
+    "src/components/PanelHeader.tsx",
+    "src/components/PinnedScenes.tsx",
+    "src/components/PlaylistPanel.tsx",
+    "src/components/PreviewMonitor.tsx",
+    "src/components/ProductionStatusBar.tsx",
+    "src/components/ProgramMonitor.tsx",
+    "src/components/QuickAccessBar.tsx",
+    "src/components/QuickActionsPanel.tsx",
+    "src/components/SceneLibrary.tsx",
+    "src/components/ShortcutsPanel.tsx",
+    "src/components/SmartToolsPanel.tsx",
+    "src/components/SourcesPanel.tsx",
+    "src/components/StatusBar.tsx",
+    "src/components/StreamSettingsPanel.tsx",
+    "src/components/SystemOverviewPanel.tsx",
+    "src/components/TabGroup.tsx",
+    "src/components/TopBar.tsx",
+    "src/components/TransitionBar.tsx",
+    "src/components/TransitionControls.tsx",
+    "src/components/TransitionControlsExtended.tsx",
+    "src/components/WorkflowBar.tsx",
+    "src/components/WorkspaceContainer.tsx",
+    "src/context/NewBroadcastContext.tsx",
+    "src/corrected-panels.css",
+    "src/engine/CanvasRenderer.ts",
+    "src/engine/MediaManager.ts",
+    "src/engine/RenderScheduler.ts",
+    "src/engine/SceneRenderer.ts",
+    "src/engine/SourceRenderer.ts",
+    "src/engine/TextureManager.ts",
+    "src/engine/media/FrameSynchronizer.ts",
+    "src/engine/media/MediaCache.ts",
+    "src/engine/media/MediaDecoder.ts",
+    "src/engine/media/MediaEngine.ts",
+    "src/engine/media/MediaRenderer.ts",
+    "src/engine/media/MediaTexture.ts",
+    "src/engine/media/TextureCache.ts",
+    "src/index.css",
+    "src/main.tsx",
+    "src/store/StoreTypes.ts"
+  ],
+  "unreachableCandidates": [
+    "src/assets/hero.png",
+    "src/assets/react.svg",
+    "src/assets/vite.svg",
+    "src/components/FiltersPanel.tsx",
+    "src/components/InputSelectionDialog.tsx",
+    "src/components/MacrosPanel.tsx",
+    "src/components/PlaylistPanel.tsx.restored",
+    "src/components/PropertiesPanel.tsx",
+    "src/components/SceneMatrix.tsx",
+    "src/components/SceneRenderer.tsx",
+    "src/components/SourceConfigurationPopup.tsx",
+    "src/components/SourceProperties/PropertiesPanels.tsx",
+    "src/components/SourceSettingsModal.tsx",
+    "src/components/SystemStatusPanel.tsx",
+    "src/components/TransitionEngine.tsx",
+    "src/components/VirtualCameraSettingsModal.tsx",
+    "src/components/VmixInputCard.tsx",
+    "src/context/BroadcastContext.tsx",
+    "src/context/BroadcastContext.tsx.bak",
+    "src/context/BroadcastContext.tsx.restored",
+    "src/engine/TransformManager.ts",
+    "src/engine/input/InputManager.ts",
+    "src/engine/input/MediaLoader.ts",
+    "src/engine/input/SourceRegistry.ts",
+    "src/engine/media/MediaPlayer.ts",
+    "src/engine/media/TextureUploader.ts",
+    "src/models/Scene.ts",
+    "src/store/broadcastStore.ts",
+    "src/store/sceneStore.ts",
+    "src/store/slices/createOutputSlice.ts",
+    "src/store/slices/createPlaybackSlice.ts",
+    "src/store/slices/createRoutingSlice.ts",
+    "src/store/slices/createSceneSlice.ts",
+    "src/store/slices/createSelectionSlice.ts",
+    "src/store/slices/createSourceSlice.ts",
+    "src/store/slices/createTransitionSlice.ts"
+  ],
+  "importedPackages": [
+    "lucide-react",
+    "react",
+    "react-dom",
+    "zustand"
+  ],
+  "controlsWithoutDirectHandlers": [
+    {
+      "file": "src/App.tsx",
+      "line": 265,
+      "tag": "button"
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 282,
+      "tag": "button"
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 283,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/AudioMixer.tsx",
+      "line": 23,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/AudioMixer.tsx",
+      "line": 24,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/AudioMixer.tsx",
+      "line": 25,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/AudioMixer.tsx",
+      "line": 26,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/AudioMixer.tsx",
+      "line": 27,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/AudioMixer.tsx",
+      "line": 43,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/AudioMixer.tsx",
+      "line": 44,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/AudioMixer.tsx",
+      "line": 49,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/AudioMixer.tsx",
+      "line": 50,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/AudioMixer.tsx",
+      "line": 72,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/FiltersPanel.tsx",
+      "line": 463,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/FiltersPanel.tsx",
+      "line": 472,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/FiltersPanel.tsx",
+      "line": 473,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/FiltersPanel.tsx",
+      "line": 475,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/GraphicsProductionModal.tsx",
+      "line": 152,
+      "tag": "select"
+    },
+    {
+      "file": "src/components/GraphicsProductionModal.tsx",
+      "line": 173,
+      "tag": "select"
+    },
+    {
+      "file": "src/components/GraphicsProductionModal.tsx",
+      "line": 183,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/GraphicsProductionModal.tsx",
+      "line": 186,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/InspectorPanel.tsx",
+      "line": 285,
+      "tag": "select"
+    },
+    {
+      "file": "src/components/LiveSettingsPanel.tsx",
+      "line": 21,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/LiveSettingsPanel.tsx",
+      "line": 22,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/LiveSettingsPanel.tsx",
+      "line": 23,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/LiveSettingsPanel.tsx",
+      "line": 24,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/LiveSettingsPanel.tsx",
+      "line": 25,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/LiveSettingsPanel.tsx",
+      "line": 26,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/LiveSettingsPanel.tsx",
+      "line": 27,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/LiveSettingsPlaceholder.tsx",
+      "line": 20,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/LiveSettingsPlaceholder.tsx",
+      "line": 21,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/MacroEditorModal.tsx",
+      "line": 56,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/MacroEditorModal.tsx",
+      "line": 113,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/MacroEditorModal.tsx",
+      "line": 141,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/MacroEditorModal.tsx",
+      "line": 156,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/MacrosPanel.tsx",
+      "line": 45,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/MacrosPanel.tsx",
+      "line": 46,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/MultitrackTimeline.tsx",
+      "line": 69,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/MultitrackTimeline.tsx",
+      "line": 73,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/PinnedScenes.tsx",
+      "line": 102,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/PinnedScenes.tsx",
+      "line": 103,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/PinnedScenes.tsx",
+      "line": 104,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/PinnedScenes.tsx",
+      "line": 105,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/PinnedScenes.tsx",
+      "line": 106,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/QuickAccessBar.tsx",
+      "line": 9,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/QuickAccessBar.tsx",
+      "line": 10,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/QuickAccessBar.tsx",
+      "line": 11,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/QuickAccessBar.tsx",
+      "line": 16,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/QuickAccessBar.tsx",
+      "line": 17,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/QuickAccessBar.tsx",
+      "line": 18,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/QuickAccessBar.tsx",
+      "line": 19,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/QuickAccessBar.tsx",
+      "line": 24,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/QuickAccessBar.tsx",
+      "line": 25,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/SourceSettingsModal.tsx",
+      "line": 127,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/SourceSettingsModal.tsx",
+      "line": 155,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/SourceSettingsModal.tsx",
+      "line": 275,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/StreamSettingsPanel.tsx",
+      "line": 79,
+      "tag": "select"
+    },
+    {
+      "file": "src/components/StreamSettingsPanel.tsx",
+      "line": 93,
+      "tag": "select"
+    },
+    {
+      "file": "src/components/StreamSettingsPanel.tsx",
+      "line": 101,
+      "tag": "select"
+    },
+    {
+      "file": "src/components/StreamSettingsPanel.tsx",
+      "line": 109,
+      "tag": "select"
+    },
+    {
+      "file": "src/components/StreamSettingsPanel.tsx",
+      "line": 116,
+      "tag": "select"
+    },
+    {
+      "file": "src/components/StreamSettingsPanel.tsx",
+      "line": 134,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/StreamSettingsPanel.tsx",
+      "line": 137,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/StreamSettingsPanel.tsx",
+      "line": 140,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/TransitionBar.tsx",
+      "line": 47,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/TransitionBar.tsx",
+      "line": 68,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/TransitionControlsExtended.tsx",
+      "line": 52,
+      "tag": "select"
+    },
+    {
+      "file": "src/components/TransitionControlsExtended.tsx",
+      "line": 60,
+      "tag": "select"
+    },
+    {
+      "file": "src/components/TransitionControlsExtended.tsx",
+      "line": 68,
+      "tag": "select"
+    },
+    {
+      "file": "src/components/TransitionControlsExtended.tsx",
+      "line": 124,
+      "tag": "button"
+    },
+    {
+      "file": "src/components/VmixInputCard.tsx",
+      "line": 125,
+      "tag": "button"
+    }
+  ],
+  "emptyFunctions": [
+    {
+      "file": "src/App.tsx",
+      "line": 55
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 55
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 108
+    },
+    {
+      "file": "src/components/FiltersPanel.tsx",
+      "line": 51
+    },
+    {
+      "file": "src/components/FiltersPanel.tsx",
+      "line": 51
+    },
+    {
+      "file": "src/components/FiltersPanel.tsx",
+      "line": 51
+    },
+    {
+      "file": "src/components/FiltersPanel.tsx",
+      "line": 51
+    },
+    {
+      "file": "src/components/InspectorPanel.tsx",
+      "line": 455
+    },
+    {
+      "file": "src/components/InspectorPanel.tsx",
+      "line": 456
+    },
+    {
+      "file": "src/components/InspectorPanel.tsx",
+      "line": 456
+    },
+    {
+      "file": "src/components/InspectorPanel.tsx",
+      "line": 456
+    },
+    {
+      "file": "src/components/InspectorPanel.tsx",
+      "line": 456
+    },
+    {
+      "file": "src/components/InspectorPanel.tsx",
+      "line": 456
+    },
+    {
+      "file": "src/components/LiveSettingsModal.tsx",
+      "line": 12
+    },
+    {
+      "file": "src/components/LiveSettingsModal.tsx",
+      "line": 12
+    },
+    {
+      "file": "src/components/MediaLibrary.tsx",
+      "line": 12
+    },
+    {
+      "file": "src/components/MediaLibrary.tsx",
+      "line": 13
+    },
+    {
+      "file": "src/components/MediaLibrary.tsx",
+      "line": 14
+    },
+    {
+      "file": "src/components/PinnedScenes.tsx",
+      "line": 178
+    },
+    {
+      "file": "src/components/PinnedScenes.tsx",
+      "line": 179
+    },
+    {
+      "file": "src/components/PinnedScenes.tsx",
+      "line": 182
+    },
+    {
+      "file": "src/components/PinnedScenes.tsx",
+      "line": 185
+    },
+    {
+      "file": "src/components/PinnedScenes.tsx",
+      "line": 186
+    },
+    {
+      "file": "src/components/PinnedScenes.tsx",
+      "line": 187
+    },
+    {
+      "file": "src/components/PinnedScenes.tsx",
+      "line": 188
+    },
+    {
+      "file": "src/components/PinnedScenes.tsx",
+      "line": 190
+    },
+    {
+      "file": "src/components/PinnedScenes.tsx",
+      "line": 191
+    },
+    {
+      "file": "src/components/PlaylistPanel.tsx",
+      "line": 14
+    },
+    {
+      "file": "src/components/PlaylistPanel.tsx",
+      "line": 15
+    },
+    {
+      "file": "src/components/SceneMatrix.tsx",
+      "line": 19
+    },
+    {
+      "file": "src/components/SceneMatrix.tsx",
+      "line": 21
+    },
+    {
+      "file": "src/components/SceneMatrix.tsx",
+      "line": 22
+    },
+    {
+      "file": "src/components/SceneMatrix.tsx",
+      "line": 23
+    },
+    {
+      "file": "src/components/SceneMatrix.tsx",
+      "line": 25
+    },
+    {
+      "file": "src/components/SceneMatrix.tsx",
+      "line": 247
+    },
+    {
+      "file": "src/components/SceneMatrix.tsx",
+      "line": 250
+    },
+    {
+      "file": "src/components/ShortcutsPanel.tsx",
+      "line": 6
+    },
+    {
+      "file": "src/components/ShortcutsPanel.tsx",
+      "line": 6
+    },
+    {
+      "file": "src/components/SourceSettingsModal.tsx",
+      "line": 7
+    },
+    {
+      "file": "src/components/SourceSettingsModal.tsx",
+      "line": 7
+    },
+    {
+      "file": "src/components/VirtualCameraSettingsModal.tsx",
+      "line": 11
+    },
+    {
+      "file": "src/components/VmixInputCard.tsx",
+      "line": 10
+    },
+    {
+      "file": "src/components/VmixInputCard.tsx",
+      "line": 11
+    },
+    {
+      "file": "src/components/VmixInputCard.tsx",
+      "line": 12
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 231
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 994
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 995
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 1657
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 1658
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 1659
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 1808
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 231
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 994
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 995
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 1657
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 1658
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 1659
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 1808
+    },
+    {
+      "file": "src/engine/media/FrameSynchronizer.ts",
+      "line": 62
+    },
+    {
+      "file": "src/engine/media/FrameSynchronizer.ts",
+      "line": 91
+    },
+    {
+      "file": "src/engine/media/FrameSynchronizer.ts",
+      "line": 142
+    },
+    {
+      "file": "src/engine/media/MediaDecoder.ts",
+      "line": 82
+    },
+    {
+      "file": "src/engine/media/MediaPlayer.ts",
+      "line": 63
+    },
+    {
+      "file": "src/engine/media/MediaPlayer.ts",
+      "line": 94
+    },
+    {
+      "file": "src/engine/media/MediaPlayer.ts",
+      "line": 147
+    }
+  ],
+  "diagnostics": [
+    {
+      "file": "src/App.tsx",
+      "line": 3,
+      "code": 6133,
+      "message": "'useRef' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 8,
+      "code": 6133,
+      "message": "'TransitionControls' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 12,
+      "code": 6133,
+      "message": "'QuickAccessBar' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 13,
+      "code": 6133,
+      "message": "'TransitionBar' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 16,
+      "code": 6133,
+      "message": "'LayersPanel' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 18,
+      "code": 6133,
+      "message": "'StatusBar' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 19,
+      "code": 6133,
+      "message": "'ProductionStatusBar' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 27,
+      "code": 6133,
+      "message": "'LiveSettingsPlaceholder' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 30,
+      "code": 6133,
+      "message": "'CommandCenterPanel' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 33,
+      "code": 6133,
+      "message": "'MenuBar' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 34,
+      "code": 6133,
+      "message": "'TabGroup' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 36,
+      "code": 6133,
+      "message": "'Maximize2' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 36,
+      "code": 6133,
+      "message": "'Minimize2' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 36,
+      "code": 6133,
+      "message": "'X' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 36,
+      "code": 6133,
+      "message": "'RefreshCw' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 36,
+      "code": 6133,
+      "message": "'Folder' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 36,
+      "code": 6133,
+      "message": "'Music' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 36,
+      "code": 6133,
+      "message": "'Sparkles' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 36,
+      "code": 6133,
+      "message": "'SlidersHorizontal' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 36,
+      "code": 6133,
+      "message": "'Globe' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 36,
+      "code": 6133,
+      "message": "'Clapperboard' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 36,
+      "code": 6133,
+      "message": "'Zap' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 36,
+      "code": 6133,
+      "message": "'Upload' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 36,
+      "code": 6133,
+      "message": "'Settings' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 36,
+      "code": 6133,
+      "message": "'Circle' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 36,
+      "code": 6133,
+      "message": "'Camera' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 36,
+      "code": 6133,
+      "message": "'Radio' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 36,
+      "code": 6133,
+      "message": "'Activity' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 36,
+      "code": 6133,
+      "message": "'LayoutDashboard' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 36,
+      "code": 6133,
+      "message": "'Mic' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 36,
+      "code": 6133,
+      "message": "'Video' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 36,
+      "code": 6133,
+      "message": "'List' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 36,
+      "code": 6133,
+      "message": "'ImageIcon' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 36,
+      "code": 6133,
+      "message": "'Grid' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 36,
+      "code": 6133,
+      "message": "'Cpu' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 38,
+      "code": 6133,
+      "message": "'WorkspaceContainer' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 39,
+      "code": 6133,
+      "message": "'WorkflowBar' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 42,
+      "code": 6133,
+      "message": "'DeveloperOverlay' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 43,
+      "code": 6133,
+      "message": "'AiCopilotPanel' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 48,
+      "code": 6133,
+      "message": "'LiveSettingsModal' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 108,
+      "code": 6133,
+      "message": "'workspacePreset' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 109,
+      "code": 6133,
+      "message": "'activeDragId' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 109,
+      "code": 6133,
+      "message": "'setActiveDragId' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 110,
+      "code": 6133,
+      "message": "'dragOffset' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 110,
+      "code": 6133,
+      "message": "'setDragOffset' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 111,
+      "code": 6133,
+      "message": "'appSize' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 114,
+      "code": 6133,
+      "message": "'handleTabClick' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 133,
+      "code": 6133,
+      "message": "'toggleFloat' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 164,
+      "code": 6133,
+      "message": "'isDocked' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 170,
+      "code": 6133,
+      "message": "'floatingDocks' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 171,
+      "code": 6133,
+      "message": "'leftDocks' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 172,
+      "code": 6133,
+      "message": "'rightDocks' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 173,
+      "code": 6133,
+      "message": "'bottomDocks' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 175,
+      "code": 6133,
+      "message": "'renderDockPanel' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 192,
+      "code": 2353,
+      "message": "Object literal may only specify known properties, and 'WebkitAppRegion' does not exist in type 'Properties<string | number, string & {}>'."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 265,
+      "code": 6133,
+      "message": "'i' is declared but its value is never read."
+    },
+    {
+      "file": "src/App.tsx",
+      "line": 340,
+      "code": 6133,
+      "message": "'error' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/AiCopilotPanel.tsx",
+      "line": 2,
+      "code": 6133,
+      "message": "'ChevronDown' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/AiCopilotPanel.tsx",
+      "line": 2,
+      "code": 6133,
+      "message": "'ChevronRight' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/AiCopilotPanel.tsx",
+      "line": 2,
+      "code": 6133,
+      "message": "'BookOpen' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/AiCopilotPanel.tsx",
+      "line": 2,
+      "code": 6133,
+      "message": "'SwitchCamera' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/AiCopilotPanel.tsx",
+      "line": 5,
+      "code": 6133,
+      "message": "'setIsVisible' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/AnalyticsPlaceholder.tsx",
+      "line": 2,
+      "code": 6133,
+      "message": "'Activity' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/AnalyticsPlaceholder.tsx",
+      "line": 2,
+      "code": 6133,
+      "message": "'Users' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/AnalyticsPlaceholder.tsx",
+      "line": 2,
+      "code": 6133,
+      "message": "'PlayCircle' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/AnalyticsPlaceholder.tsx",
+      "line": 2,
+      "code": 6133,
+      "message": "'Share2' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/AnalyticsPlaceholder.tsx",
+      "line": 2,
+      "code": 6133,
+      "message": "'BarChart2' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/AnalyticsPlaceholder.tsx",
+      "line": 110,
+      "code": 6133,
+      "message": "'EngagementTab' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/AnalyticsPlaceholder.tsx",
+      "line": 142,
+      "code": 6133,
+      "message": "'SourcesTab' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/AnalyticsPlaceholder.tsx",
+      "line": 163,
+      "code": 6133,
+      "message": "'GeoTab' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/AnalyticsPlaceholder.tsx",
+      "line": 184,
+      "code": 6133,
+      "message": "'activeTab' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/AnalyticsPlaceholder.tsx",
+      "line": 184,
+      "code": 6133,
+      "message": "'setActiveTab' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/AudioMixer.tsx",
+      "line": 1,
+      "code": 6133,
+      "message": "'Settings2' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/AudioMixer.tsx",
+      "line": 1,
+      "code": 6133,
+      "message": "'Headphones' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/AudioMixer.tsx",
+      "line": 1,
+      "code": 6133,
+      "message": "'Activity' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/DistributionPanel.tsx",
+      "line": 3,
+      "code": 2459,
+      "message": "Module '\"../context/NewBroadcastContext\"' declares 'StreamDestination' locally, but it is not exported."
+    },
+    {
+      "file": "src/components/DistributionPanel.tsx",
+      "line": 4,
+      "code": 6133,
+      "message": "'Share2' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/DistributionPanel.tsx",
+      "line": 4,
+      "code": 6133,
+      "message": "'SignalMedium' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/DistributionPanel.tsx",
+      "line": 4,
+      "code": 6133,
+      "message": "'SignalLow' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/DistributionPanel.tsx",
+      "line": 4,
+      "code": 6133,
+      "message": "'Signal' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/FiltersPanel.tsx",
+      "line": 3,
+      "code": 2459,
+      "message": "Module '\"../context/NewBroadcastContext\"' declares 'SourceFilter' locally, but it is not exported."
+    },
+    {
+      "file": "src/components/FiltersPanel.tsx",
+      "line": 4,
+      "code": 6133,
+      "message": "'EyeOff' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/FiltersPanel.tsx",
+      "line": 4,
+      "code": 6133,
+      "message": "'Filter' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/FiltersPanel.tsx",
+      "line": 57,
+      "code": 6133,
+      "message": "'showAddMenu' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/FiltersPanel.tsx",
+      "line": 90,
+      "code": 6133,
+      "message": "'activeFilter' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/FiltersPanel.tsx",
+      "line": 92,
+      "code": 6133,
+      "message": "'videoFiltersApplied' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/FiltersPanel.tsx",
+      "line": 93,
+      "code": 6133,
+      "message": "'audioFiltersApplied' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/FiltersPanel.tsx",
+      "line": 95,
+      "code": 6133,
+      "message": "'handleAddFilter' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/FiltersPanel.tsx",
+      "line": 112,
+      "code": 6133,
+      "message": "'renderFilterSettings' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/FiltersPanel.tsx",
+      "line": 369,
+      "code": 6133,
+      "message": "'renderFilterItem' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/FiltersPanel.tsx",
+      "line": 438,
+      "code": 6133,
+      "message": "'idx' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/GraphicsCompositor.tsx",
+      "line": 3,
+      "code": 2305,
+      "message": "Module '\"./GraphicsDesigner\"' has no exported member 'GraphicTemplate'."
+    },
+    {
+      "file": "src/components/GraphicsCompositor.tsx",
+      "line": 3,
+      "code": 6196,
+      "message": "'GraphicTemplate' is declared but never used."
+    },
+    {
+      "file": "src/components/GraphicsCompositor.tsx",
+      "line": 3,
+      "code": 2305,
+      "message": "Module '\"./GraphicsDesigner\"' has no exported member 'GraphicLayer'."
+    },
+    {
+      "file": "src/components/GraphicsCompositor.tsx",
+      "line": 94,
+      "code": 6133,
+      "message": "'isSourceLive' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/GraphicsCompositor.tsx",
+      "line": 96,
+      "code": 2554,
+      "message": "Expected 1 arguments, but got 0."
+    },
+    {
+      "file": "src/components/GraphicsProductionModal.tsx",
+      "line": 2,
+      "code": 6133,
+      "message": "'Type' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/GraphicsProductionModal.tsx",
+      "line": 2,
+      "code": 6133,
+      "message": "'Settings' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/InputSelectionDialog.tsx",
+      "line": 6,
+      "code": 6133,
+      "message": "'PlaySquare' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/InspectorPanel.tsx",
+      "line": 3,
+      "code": 2459,
+      "message": "Module '\"../context/NewBroadcastContext\"' declares 'SceneSource' locally, but it is not exported."
+    },
+    {
+      "file": "src/components/InspectorPanel.tsx",
+      "line": 4,
+      "code": 6133,
+      "message": "'Monitor' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/InspectorPanel.tsx",
+      "line": 4,
+      "code": 6133,
+      "message": "'Volume2' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/InspectorPanel.tsx",
+      "line": 4,
+      "code": 6133,
+      "message": "'Sliders' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/InspectorPanel.tsx",
+      "line": 4,
+      "code": 6133,
+      "message": "'Hash' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/InspectorPanel.tsx",
+      "line": 4,
+      "code": 6133,
+      "message": "'AppWindow' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/InspectorPanel.tsx",
+      "line": 4,
+      "code": 6133,
+      "message": "'Cpu' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/InspectorPanel.tsx",
+      "line": 4,
+      "code": 6133,
+      "message": "'CropIcon' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/InspectorPanel.tsx",
+      "line": 4,
+      "code": 6133,
+      "message": "'Palette' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/InspectorPanel.tsx",
+      "line": 4,
+      "code": 6133,
+      "message": "'Filter' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/InspectorPanel.tsx",
+      "line": 4,
+      "code": 6133,
+      "message": "'Link' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/InspectorPanel.tsx",
+      "line": 4,
+      "code": 6133,
+      "message": "'RotateCw' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/InspectorPanel.tsx",
+      "line": 100,
+      "code": 6133,
+      "message": "'currentScene' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/InspectorPanel.tsx",
+      "line": 456,
+      "code": 6133,
+      "message": "'updateFilterSettings' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/LayersPanel.tsx",
+      "line": 30,
+      "code": 6133,
+      "message": "'index' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/LeftNavigation.tsx",
+      "line": 2,
+      "code": 6133,
+      "message": "'Activity' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/LeftNavigation.tsx",
+      "line": 2,
+      "code": 6133,
+      "message": "'Upload' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/LiveSettingsModal.tsx",
+      "line": 3,
+      "code": 2459,
+      "message": "Module '\"../context/NewBroadcastContext\"' declares 'StreamDestination' locally, but it is not exported."
+    },
+    {
+      "file": "src/components/LiveSettingsModal.tsx",
+      "line": 4,
+      "code": 6133,
+      "message": "'Save' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/LiveSettingsModal.tsx",
+      "line": 4,
+      "code": 6133,
+      "message": "'Video' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/LiveSettingsModal.tsx",
+      "line": 4,
+      "code": 6133,
+      "message": "'Shield' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/LiveSettingsModal.tsx",
+      "line": 4,
+      "code": 6133,
+      "message": "'Settings' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/LiveSettingsModal.tsx",
+      "line": 4,
+      "code": 6133,
+      "message": "'Server' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/LiveSettingsModal.tsx",
+      "line": 4,
+      "code": 6133,
+      "message": "'Plus' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/MacroEditorModal.tsx",
+      "line": 11,
+      "code": 6133,
+      "message": "'createMacro' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/MacroEditorModal.tsx",
+      "line": 11,
+      "code": 6133,
+      "message": "'deleteMacro' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/MacrosPanel.tsx",
+      "line": 3,
+      "code": 6133,
+      "message": "'MoreVertical' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/MediaLibrary.tsx",
+      "line": 3,
+      "code": 6133,
+      "message": "'Sliders' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/NotesPanel.tsx",
+      "line": 2,
+      "code": 6133,
+      "message": "'PanelHeader' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/NotesPanel.tsx",
+      "line": 3,
+      "code": 6133,
+      "message": "'Edit3' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/PanelHeader.tsx",
+      "line": 2,
+      "code": 6133,
+      "message": "'MoreVertical' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/PinnedScenes.tsx",
+      "line": 2,
+      "code": 6133,
+      "message": "'Plus' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/PinnedScenes.tsx",
+      "line": 2,
+      "code": 6133,
+      "message": "'Search' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/PinnedScenes.tsx",
+      "line": 2,
+      "code": 6133,
+      "message": "'ChevronDown' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/PinnedScenes.tsx",
+      "line": 2,
+      "code": 6133,
+      "message": "'ChevronRight' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/PinnedScenes.tsx",
+      "line": 2,
+      "code": 6133,
+      "message": "'Settings' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/PinnedScenes.tsx",
+      "line": 7,
+      "code": 6133,
+      "message": "'addScene' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/PinnedScenes.tsx",
+      "line": 10,
+      "code": 6133,
+      "message": "'setSearchQuery' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/PinnedScenes.tsx",
+      "line": 11,
+      "code": 6133,
+      "message": "'hoveredScene' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/PinnedScenes.tsx",
+      "line": 11,
+      "code": 6133,
+      "message": "'setHoveredScene' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/PinnedScenes.tsx",
+      "line": 12,
+      "code": 6133,
+      "message": "'selectedScenes' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/PinnedScenes.tsx",
+      "line": 12,
+      "code": 6133,
+      "message": "'setSelectedScenes' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/PinnedScenes.tsx",
+      "line": 26,
+      "code": 6133,
+      "message": "'getBadgeColor' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/PinnedScenes.tsx",
+      "line": 33,
+      "code": 6133,
+      "message": "'getStatus' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/PinnedScenes.tsx",
+      "line": 39,
+      "code": 6133,
+      "message": "'getBorderColor' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/PinnedScenes.tsx",
+      "line": 45,
+      "code": 6133,
+      "message": "'getBackgroundColor' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/PinnedScenes.tsx",
+      "line": 73,
+      "code": 6133,
+      "message": "'handleRightClick' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/PinnedScenes.tsx",
+      "line": 78,
+      "code": 6133,
+      "message": "'filteredScenes' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/PinnedScenes.tsx",
+      "line": 179,
+      "code": 2741,
+      "message": "Property 'label' is missing in type '{ separator: true; action: () => void; }' but required in type 'ContextMenuItem'."
+    },
+    {
+      "file": "src/components/PinnedScenes.tsx",
+      "line": 182,
+      "code": 2741,
+      "message": "Property 'label' is missing in type '{ separator: true; action: () => void; }' but required in type 'ContextMenuItem'."
+    },
+    {
+      "file": "src/components/PinnedScenes.tsx",
+      "line": 185,
+      "code": 2741,
+      "message": "Property 'label' is missing in type '{ separator: true; action: () => void; }' but required in type 'ContextMenuItem'."
+    },
+    {
+      "file": "src/components/PinnedScenes.tsx",
+      "line": 189,
+      "code": 2551,
+      "message": "Property 'pinned' does not exist on type 'Scene'. Did you mean 'isPinned'?"
+    },
+    {
+      "file": "src/components/PinnedScenes.tsx",
+      "line": 189,
+      "code": 2551,
+      "message": "Property 'pinned' does not exist on type 'Scene'. Did you mean 'isPinned'?"
+    },
+    {
+      "file": "src/components/PinnedScenes.tsx",
+      "line": 190,
+      "code": 2741,
+      "message": "Property 'label' is missing in type '{ separator: true; action: () => void; }' but required in type 'ContextMenuItem'."
+    },
+    {
+      "file": "src/components/PlaylistPanel.tsx",
+      "line": 14,
+      "code": 6133,
+      "message": "'index' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/PlaylistPanel.tsx",
+      "line": 14,
+      "code": 6133,
+      "message": "'dir' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/PlaylistPanel.tsx",
+      "line": 15,
+      "code": 6133,
+      "message": "'playlist' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/PlaylistPanel.tsx",
+      "line": 15,
+      "code": 6133,
+      "message": "'id' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/PreviewMonitor.tsx",
+      "line": 2,
+      "code": 6133,
+      "message": "'Grid' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/PreviewMonitor.tsx",
+      "line": 2,
+      "code": 6133,
+      "message": "'Camera' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/PreviewMonitor.tsx",
+      "line": 2,
+      "code": 6133,
+      "message": "'Maximize2' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/ProgramMonitor.tsx",
+      "line": 2,
+      "code": 6133,
+      "message": "'Grid' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/ProgramMonitor.tsx",
+      "line": 2,
+      "code": 6133,
+      "message": "'Camera' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/ProgramMonitor.tsx",
+      "line": 2,
+      "code": 6133,
+      "message": "'Maximize2' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/QuickAccessBar.tsx",
+      "line": 2,
+      "code": 6133,
+      "message": "'Square' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/QuickAccessBar.tsx",
+      "line": 2,
+      "code": 6133,
+      "message": "'Zap' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/SceneLibrary.tsx",
+      "line": 6,
+      "code": 6198,
+      "message": "All destructured elements are unused."
+    },
+    {
+      "file": "src/components/SceneMatrix.tsx",
+      "line": 1,
+      "code": 6133,
+      "message": "'useCallback' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/SceneMatrix.tsx",
+      "line": 3,
+      "code": 6133,
+      "message": "'Scene' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/SceneMatrix.tsx",
+      "line": 3,
+      "code": 2724,
+      "message": "'\"../context/NewBroadcastContext\"' has no exported member named 'Scene'. Did you mean 'SceneId'?"
+    },
+    {
+      "file": "src/components/SceneMatrix.tsx",
+      "line": 6,
+      "code": 2307,
+      "message": "Cannot find module './SceneSettingsModal' or its corresponding type declarations."
+    },
+    {
+      "file": "src/components/SceneMatrix.tsx",
+      "line": 42,
+      "code": 6133,
+      "message": "'containerHeight' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/SceneMatrix.tsx",
+      "line": 190,
+      "code": 2322,
+      "message": "Type '{ scene: Scene; index: number; activeScene: string; liveScene: string; selectScene: (id: string, multi?: boolean) => void; takeLive: (targetSceneId?: string) => void; autoTransition: (targetSceneId?: string) => void; ... 5 more ...; setSettingsSceneId: Dispatch<...>; }' is not assignable to type 'IntrinsicAttributes & VmixInputCardProps'.\n  Property 'activeScene' does not exist on type 'IntrinsicAttributes & VmixInputCardProps'."
+    },
+    {
+      "file": "src/components/SceneRenderer.tsx",
+      "line": 3,
+      "code": 2459,
+      "message": "Module '\"../context/NewBroadcastContext\"' declares 'SceneSource' locally, but it is not exported."
+    },
+    {
+      "file": "src/components/ShortcutsPanel.tsx",
+      "line": 3,
+      "code": 2459,
+      "message": "Module '\"../context/NewBroadcastContext\"' declares 'TransitionType' locally, but it is not exported."
+    },
+    {
+      "file": "src/components/SourceConfigurationPopup.tsx",
+      "line": 2,
+      "code": 6133,
+      "message": "'Video' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/SourceConfigurationPopup.tsx",
+      "line": 6,
+      "code": 6133,
+      "message": "'setName' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/SourceConfigurationPopup.tsx",
+      "line": 7,
+      "code": 6133,
+      "message": "'setSettings' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/SourceProperties/PropertiesPanels.tsx",
+      "line": 2,
+      "code": 6133,
+      "message": "'SceneSource' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/SourceProperties/PropertiesPanels.tsx",
+      "line": 2,
+      "code": 2459,
+      "message": "Module '\"../../context/NewBroadcastContext\"' declares 'SceneSource' locally, but it is not exported."
+    },
+    {
+      "file": "src/components/SourceProperties/PropertiesPanels.tsx",
+      "line": 191,
+      "code": 6133,
+      "message": "'onChange' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/SourceSettingsModal.tsx",
+      "line": 3,
+      "code": 6133,
+      "message": "'SceneSource' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/SourceSettingsModal.tsx",
+      "line": 3,
+      "code": 2459,
+      "message": "Module '\"../context/NewBroadcastContext\"' declares 'SceneSource' locally, but it is not exported."
+    },
+    {
+      "file": "src/components/SourceSettingsModal.tsx",
+      "line": 4,
+      "code": 6133,
+      "message": "'Wind' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/SourceSettingsModal.tsx",
+      "line": 4,
+      "code": 6133,
+      "message": "'Video' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/SourceSettingsModal.tsx",
+      "line": 4,
+      "code": 6133,
+      "message": "'Type' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/SourceSettingsModal.tsx",
+      "line": 4,
+      "code": 6133,
+      "message": "'ImageIcon' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/SourceSettingsModal.tsx",
+      "line": 4,
+      "code": 6133,
+      "message": "'Globe' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/SourceSettingsModal.tsx",
+      "line": 4,
+      "code": 6133,
+      "message": "'Radio' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/SourcesPanel.tsx",
+      "line": 2,
+      "code": 6133,
+      "message": "'Grid' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/SourcesPanel.tsx",
+      "line": 2,
+      "code": 6133,
+      "message": "'ChevronDown' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/SourcesPanel.tsx",
+      "line": 2,
+      "code": 6133,
+      "message": "'SlidersHorizontal' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/StreamSettingsPanel.tsx",
+      "line": 2,
+      "code": 6133,
+      "message": "'Mic' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/StreamSettingsPanel.tsx",
+      "line": 2,
+      "code": 6133,
+      "message": "'Network' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/StreamSettingsPanel.tsx",
+      "line": 2,
+      "code": 6133,
+      "message": "'Share2' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/StreamSettingsPanel.tsx",
+      "line": 2,
+      "code": 6133,
+      "message": "'Settings2' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/SystemStatusPanel.tsx",
+      "line": 2,
+      "code": 6133,
+      "message": "'Activity' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/SystemStatusPanel.tsx",
+      "line": 2,
+      "code": 6133,
+      "message": "'ShieldCheck' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/TabGroup.tsx",
+      "line": 58,
+      "code": 2322,
+      "message": "Type '{ id: any; title: string; isFloating: boolean; }' is not assignable to type 'IntrinsicAttributes & PanelHeaderProps'.\n  Property 'isFloating' does not exist on type 'IntrinsicAttributes & PanelHeaderProps'."
+    },
+    {
+      "file": "src/components/TopBar.tsx",
+      "line": 3,
+      "code": 6133,
+      "message": "'Settings' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/TopBar.tsx",
+      "line": 3,
+      "code": 6133,
+      "message": "'User' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/TopBar.tsx",
+      "line": 3,
+      "code": 6133,
+      "message": "'Video' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/TopBar.tsx",
+      "line": 3,
+      "code": 6133,
+      "message": "'Radio' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/TopBar.tsx",
+      "line": 3,
+      "code": 6133,
+      "message": "'Activity' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/TopBar.tsx",
+      "line": 3,
+      "code": 6133,
+      "message": "'MonitorUp' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/TopBar.tsx",
+      "line": 3,
+      "code": 6133,
+      "message": "'Minus' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/TopBar.tsx",
+      "line": 3,
+      "code": 6133,
+      "message": "'Square' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/TopBar.tsx",
+      "line": 3,
+      "code": 6133,
+      "message": "'Copy' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/TopBar.tsx",
+      "line": 3,
+      "code": 6133,
+      "message": "'X' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/TopBar.tsx",
+      "line": 6,
+      "code": 6198,
+      "message": "All destructured elements are unused."
+    },
+    {
+      "file": "src/components/TopBar.tsx",
+      "line": 100,
+      "code": 2353,
+      "message": "Object literal may only specify known properties, and 'WebkitAppRegion' does not exist in type 'Properties<string | number, string & {}>'."
+    },
+    {
+      "file": "src/components/TransitionControlsExtended.tsx",
+      "line": 2,
+      "code": 6133,
+      "message": "'Columns' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/VirtualCameraSettingsModal.tsx",
+      "line": 3,
+      "code": 6133,
+      "message": "'Save' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/VirtualCameraSettingsModal.tsx",
+      "line": 17,
+      "code": 6133,
+      "message": "'setFps' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/VirtualCameraSettingsModal.tsx",
+      "line": 18,
+      "code": 6133,
+      "message": "'setBitrate' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/VirtualCameraSettingsModal.tsx",
+      "line": 22,
+      "code": 6133,
+      "message": "'handleSave' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/VmixInputCard.tsx",
+      "line": 10,
+      "code": 6133,
+      "message": "'id' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/VmixInputCard.tsx",
+      "line": 11,
+      "code": 6133,
+      "message": "'id' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/VmixInputCard.tsx",
+      "line": 57,
+      "code": 2554,
+      "message": "Expected 0 arguments, but got 1."
+    },
+    {
+      "file": "src/components/VmixInputCard.tsx",
+      "line": 116,
+      "code": 2554,
+      "message": "Expected 0 arguments, but got 1."
+    },
+    {
+      "file": "src/components/VmixInputCard.tsx",
+      "line": 127,
+      "code": 2554,
+      "message": "Expected 0 arguments, but got 1."
+    },
+    {
+      "file": "src/components/WorkflowBar.tsx",
+      "line": 3,
+      "code": 6133,
+      "message": "'useBroadcast' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/WorkflowBar.tsx",
+      "line": 12,
+      "code": 6133,
+      "message": "'isSelected' is declared but its value is never read."
+    },
+    {
+      "file": "src/components/WorkspaceContainer.tsx",
+      "line": 6,
+      "code": 6133,
+      "message": "'StreamSettingsPanel' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 7,
+      "code": 6196,
+      "message": "'StreamStatus' is declared but never used."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 7,
+      "code": 6196,
+      "message": "'RecordingStatus' is declared but never used."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 7,
+      "code": 6196,
+      "message": "'MacroAction' is declared but never used."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 7,
+      "code": 6196,
+      "message": "'MacroTrigger' is declared but never used."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 7,
+      "code": 6196,
+      "message": "'AudioSettings' is declared but never used."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 277,
+      "code": 2591,
+      "message": "Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node` and then add 'node' to the types field in your tsconfig."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 339,
+      "code": 2591,
+      "message": "Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node` and then add 'node' to the types field in your tsconfig."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 352,
+      "code": 6133,
+      "message": "'activeMediaFiles' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 352,
+      "code": 6133,
+      "message": "'setActiveMediaFiles' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 355,
+      "code": 6133,
+      "message": "'clipboardSource' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 360,
+      "code": 6133,
+      "message": "'setMediaPlaylist' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 478,
+      "code": 6133,
+      "message": "'setRenderTime' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 511,
+      "code": 6133,
+      "message": "'lastChunkRef' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 515,
+      "code": 2353,
+      "message": "Object literal may only specify known properties, and 'platform' does not exist in type 'StreamDestination'."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 516,
+      "code": 2353,
+      "message": "Object literal may only specify known properties, and 'platform' does not exist in type 'StreamDestination'."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 517,
+      "code": 2353,
+      "message": "Object literal may only specify known properties, and 'platform' does not exist in type 'StreamDestination'."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 518,
+      "code": 2353,
+      "message": "Object literal may only specify known properties, and 'platform' does not exist in type 'StreamDestination'."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 519,
+      "code": 2353,
+      "message": "Object literal may only specify known properties, and 'platform' does not exist in type 'StreamDestination'."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 520,
+      "code": 2353,
+      "message": "Object literal may only specify known properties, and 'platform' does not exist in type 'StreamDestination'."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 521,
+      "code": 2353,
+      "message": "Object literal may only specify known properties, and 'platform' does not exist in type 'StreamDestination'."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 522,
+      "code": 2353,
+      "message": "Object literal may only specify known properties, and 'platform' does not exist in type 'StreamDestination'."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 523,
+      "code": 2353,
+      "message": "Object literal may only specify known properties, and 'platform' does not exist in type 'StreamDestination'."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 524,
+      "code": 2353,
+      "message": "Object literal may only specify known properties, and 'platform' does not exist in type 'StreamDestination'."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 570,
+      "code": 6133,
+      "message": "'newDocks' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 612,
+      "code": 6133,
+      "message": "'setRamUsage' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 613,
+      "code": 6133,
+      "message": "'setGpuMemory' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 614,
+      "code": 6133,
+      "message": "'setDiskUsage' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 645,
+      "code": 6133,
+      "message": "'streamRecorderRef' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 660,
+      "code": 2300,
+      "message": "Duplicate identifier 'compressorNode'."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 661,
+      "code": 2300,
+      "message": "Duplicate identifier 'compressorNode'."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 667,
+      "code": 6133,
+      "message": "'setAudioMeterLevels' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 878,
+      "code": 2345,
+      "message": "Argument of type '(prev: Scene[]) => (Scene | { id: string; name: string; duration: string; transitionType: string; pinned: boolean; sources: any[]; })[]' is not assignable to parameter of type 'SetStateAction<Scene[]>'.\n  Type '(prev: Scene[]) => (Scene | { id: string; name: string; duration: string; transitionType: string; pinned: boolean; sources: any[]; })[]' is not assignable to type '(prevState: Scene[]) => Scene[]'.\n    Type '(Scene | { id: string; name: string; duration: string; transitionType: string; pinned: boolean; sources: any[]; })[]' is not assignable to type 'Scene[]'.\n      Type 'Scene | { id: string; name: string; duration: string; transitionType: string; pinned: boolean; sources: any[]; }' is not assignable to type 'Scene'.\n        Type '{ id: string; name: string; duration: string; transitionType: string; pinned: boolean; sources: any[]; }' is missing the following properties from type 'Scene': isPinned, isLocked, color, createdAt, updatedAt"
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 913,
+      "code": 2551,
+      "message": "Property 'pinned' does not exist on type 'Scene'. Did you mean 'isPinned'?"
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 920,
+      "code": 2551,
+      "message": "Property 'pinned' does not exist on type 'Scene'. Did you mean 'isPinned'?"
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 924,
+      "code": 2739,
+      "message": "Type '{ id: string; name: string; type: string; visible: true; locked: false; x: number; y: number; width: number; height: number; settings: any; }' is missing the following properties from type 'SceneSource': zIndex, opacity, filters"
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 994,
+      "code": 6133,
+      "message": "'sceneId' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 994,
+      "code": 6133,
+      "message": "'sourceId' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 994,
+      "code": 6133,
+      "message": "'filterType' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 995,
+      "code": 6133,
+      "message": "'sceneId' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 995,
+      "code": 6133,
+      "message": "'sourceId' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 995,
+      "code": 6133,
+      "message": "'filterId' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 1100,
+      "code": 2552,
+      "message": "Cannot find name 'electron'. Did you mean 'Selection'?"
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 1101,
+      "code": 2304,
+      "message": "Cannot find name 'electron'."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 1281,
+      "code": 6133,
+      "message": "'getOrCreateVideo' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 1511,
+      "code": 6133,
+      "message": "'getOrCreateImage' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 1512,
+      "code": 2304,
+      "message": "Cannot find name 'imageElementsRef'."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 1518,
+      "code": 2304,
+      "message": "Cannot find name 'imageElementsRef'."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 1587,
+      "code": 2345,
+      "message": "Argument of type 'Record<number, string>' is not assignable to parameter of type 'string[]'.\n  Type 'Record<number, string>' is missing the following properties from type 'string[]': length, pop, push, concat, and 35 more."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 1597,
+      "code": 2345,
+      "message": "Argument of type '(prev: StreamDestination[]) => { status: \"connected\"; id: string; name: string; type: \"ndi\" | \"custom\" | \"rtmp\" | \"srt\" | \"virtualcam\"; rtmpUrl: string; streamKey: string; ... 5 more ...; fps: number; }[]' is not assignable to parameter of type 'SetStateAction<StreamDestination[]>'.\n  Type '(prev: StreamDestination[]) => { status: \"connected\"; id: string; name: string; type: \"ndi\" | \"custom\" | \"rtmp\" | \"srt\" | \"virtualcam\"; rtmpUrl: string; streamKey: string; ... 5 more ...; fps: number; }[]' is not assignable to type '(prevState: StreamDestination[]) => StreamDestination[]'.\n    Type '{ status: \"connected\"; id: string; name: string; type: \"ndi\" | \"custom\" | \"rtmp\" | \"srt\" | \"virtualcam\"; rtmpUrl: string; streamKey: string; enabled: boolean; bitrate: number; audioBitrate: number; encoder: string; resolution: string; fps: number; }[]' is not assignable to type 'StreamDestination[]'.\n      Type '{ status: \"connected\"; id: string; name: string; type: \"rtmp\" | \"srt\" | \"ndi\" | \"virtualcam\" | \"custom\"; rtmpUrl: string; streamKey: string; enabled: boolean; bitrate: number; audioBitrate: number; encoder: string; resolution: string; fps: number; }' is not assignable to type 'StreamDestination'.\n        Types of property 'status' are incompatible.\n          Type '\"connected\"' is not assignable to type 'StreamStatus'. Did you mean '\"disconnected\"'?"
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 1657,
+      "code": 6133,
+      "message": "'sceneId' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 1657,
+      "code": 6133,
+      "message": "'sourceId' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 1657,
+      "code": 6133,
+      "message": "'filterId' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 1658,
+      "code": 6133,
+      "message": "'sceneId' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 1658,
+      "code": 6133,
+      "message": "'sourceId' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 1658,
+      "code": 6133,
+      "message": "'filterId' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 1658,
+      "code": 6133,
+      "message": "'direction' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 1659,
+      "code": 6133,
+      "message": "'sceneId' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 1659,
+      "code": 6133,
+      "message": "'sourceId' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 1659,
+      "code": 6133,
+      "message": "'filterId' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 1659,
+      "code": 6133,
+      "message": "'settings' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/BroadcastContext.tsx",
+      "line": 1663,
+      "code": 2740,
+      "message": "Type '{ desktopSources: DesktopSource[]; loadDesktopSources: () => Promise<void>; activeScene: string; liveScene: string; scenes: Scene[]; setScenes: Dispatch<SetStateAction<Scene[]>>; ... 111 more ...; saveStateForUndo: () => void; }' is missing the following properties from type 'BroadcastContextType': sceneCollections, activeCollectionId, clipboardSource, macros, and 4 more."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 1,
+      "code": 6133,
+      "message": "'useMemo' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 7,
+      "code": 6196,
+      "message": "'StreamStatus' is declared but never used."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 7,
+      "code": 6196,
+      "message": "'RecordingStatus' is declared but never used."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 7,
+      "code": 6196,
+      "message": "'MacroAction' is declared but never used."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 7,
+      "code": 6196,
+      "message": "'MacroTrigger' is declared but never used."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 7,
+      "code": 6196,
+      "message": "'AudioSettings' is declared but never used."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 277,
+      "code": 2591,
+      "message": "Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node` and then add 'node' to the types field in your tsconfig."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 339,
+      "code": 2591,
+      "message": "Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node` and then add 'node' to the types field in your tsconfig."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 352,
+      "code": 6133,
+      "message": "'activeMediaFiles' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 352,
+      "code": 6133,
+      "message": "'setActiveMediaFiles' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 355,
+      "code": 6133,
+      "message": "'clipboardSource' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 360,
+      "code": 6133,
+      "message": "'setMediaPlaylist' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 478,
+      "code": 6133,
+      "message": "'setRenderTime' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 511,
+      "code": 6133,
+      "message": "'lastChunkRef' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 515,
+      "code": 2353,
+      "message": "Object literal may only specify known properties, and 'platform' does not exist in type 'StreamDestination'."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 516,
+      "code": 2353,
+      "message": "Object literal may only specify known properties, and 'platform' does not exist in type 'StreamDestination'."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 517,
+      "code": 2353,
+      "message": "Object literal may only specify known properties, and 'platform' does not exist in type 'StreamDestination'."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 518,
+      "code": 2353,
+      "message": "Object literal may only specify known properties, and 'platform' does not exist in type 'StreamDestination'."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 519,
+      "code": 2353,
+      "message": "Object literal may only specify known properties, and 'platform' does not exist in type 'StreamDestination'."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 520,
+      "code": 2353,
+      "message": "Object literal may only specify known properties, and 'platform' does not exist in type 'StreamDestination'."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 521,
+      "code": 2353,
+      "message": "Object literal may only specify known properties, and 'platform' does not exist in type 'StreamDestination'."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 522,
+      "code": 2353,
+      "message": "Object literal may only specify known properties, and 'platform' does not exist in type 'StreamDestination'."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 523,
+      "code": 2353,
+      "message": "Object literal may only specify known properties, and 'platform' does not exist in type 'StreamDestination'."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 524,
+      "code": 2353,
+      "message": "Object literal may only specify known properties, and 'platform' does not exist in type 'StreamDestination'."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 570,
+      "code": 6133,
+      "message": "'newDocks' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 612,
+      "code": 6133,
+      "message": "'setRamUsage' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 613,
+      "code": 6133,
+      "message": "'setGpuMemory' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 614,
+      "code": 6133,
+      "message": "'setDiskUsage' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 645,
+      "code": 6133,
+      "message": "'streamRecorderRef' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 660,
+      "code": 2300,
+      "message": "Duplicate identifier 'compressorNode'."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 661,
+      "code": 2300,
+      "message": "Duplicate identifier 'compressorNode'."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 667,
+      "code": 6133,
+      "message": "'setAudioMeterLevels' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 878,
+      "code": 2345,
+      "message": "Argument of type '(prev: Scene[]) => (Scene | { id: string; name: string; duration: string; transitionType: string; pinned: boolean; sources: any[]; })[]' is not assignable to parameter of type 'SetStateAction<Scene[]>'.\n  Type '(prev: Scene[]) => (Scene | { id: string; name: string; duration: string; transitionType: string; pinned: boolean; sources: any[]; })[]' is not assignable to type '(prevState: Scene[]) => Scene[]'.\n    Type '(Scene | { id: string; name: string; duration: string; transitionType: string; pinned: boolean; sources: any[]; })[]' is not assignable to type 'Scene[]'.\n      Type 'Scene | { id: string; name: string; duration: string; transitionType: string; pinned: boolean; sources: any[]; }' is not assignable to type 'Scene'.\n        Type '{ id: string; name: string; duration: string; transitionType: string; pinned: boolean; sources: any[]; }' is missing the following properties from type 'Scene': isPinned, isLocked, color, createdAt, updatedAt"
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 913,
+      "code": 2551,
+      "message": "Property 'pinned' does not exist on type 'Scene'. Did you mean 'isPinned'?"
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 920,
+      "code": 2551,
+      "message": "Property 'pinned' does not exist on type 'Scene'. Did you mean 'isPinned'?"
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 924,
+      "code": 2739,
+      "message": "Type '{ id: string; name: string; type: string; visible: true; locked: false; x: number; y: number; width: number; height: number; settings: any; }' is missing the following properties from type 'SceneSource': zIndex, opacity, filters"
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 994,
+      "code": 6133,
+      "message": "'sceneId' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 994,
+      "code": 6133,
+      "message": "'sourceId' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 994,
+      "code": 6133,
+      "message": "'filterType' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 995,
+      "code": 6133,
+      "message": "'sceneId' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 995,
+      "code": 6133,
+      "message": "'sourceId' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 995,
+      "code": 6133,
+      "message": "'filterId' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 1100,
+      "code": 2552,
+      "message": "Cannot find name 'electron'. Did you mean 'Selection'?"
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 1101,
+      "code": 2552,
+      "message": "Cannot find name 'electron'. Did you mean 'Selection'?"
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 1281,
+      "code": 6133,
+      "message": "'getOrCreateVideo' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 1511,
+      "code": 6133,
+      "message": "'getOrCreateImage' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 1512,
+      "code": 2552,
+      "message": "Cannot find name 'imageElementsRef'. Did you mean 'imageElements'?"
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 1518,
+      "code": 2552,
+      "message": "Cannot find name 'imageElementsRef'. Did you mean 'imageElements'?"
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 1587,
+      "code": 2345,
+      "message": "Argument of type 'Record<number, string>' is not assignable to parameter of type 'string[]'.\n  Type 'Record<number, string>' is missing the following properties from type 'string[]': length, pop, push, concat, and 35 more."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 1597,
+      "code": 2345,
+      "message": "Argument of type '(prev: StreamDestination[]) => { status: \"connected\"; id: string; name: string; type: \"ndi\" | \"custom\" | \"rtmp\" | \"srt\" | \"virtualcam\"; rtmpUrl: string; streamKey: string; ... 5 more ...; fps: number; }[]' is not assignable to parameter of type 'SetStateAction<StreamDestination[]>'.\n  Type '(prev: StreamDestination[]) => { status: \"connected\"; id: string; name: string; type: \"ndi\" | \"custom\" | \"rtmp\" | \"srt\" | \"virtualcam\"; rtmpUrl: string; streamKey: string; ... 5 more ...; fps: number; }[]' is not assignable to type '(prevState: StreamDestination[]) => StreamDestination[]'.\n    Type '{ status: \"connected\"; id: string; name: string; type: \"ndi\" | \"custom\" | \"rtmp\" | \"srt\" | \"virtualcam\"; rtmpUrl: string; streamKey: string; enabled: boolean; bitrate: number; audioBitrate: number; encoder: string; resolution: string; fps: number; }[]' is not assignable to type 'StreamDestination[]'.\n      Type '{ status: \"connected\"; id: string; name: string; type: \"rtmp\" | \"srt\" | \"ndi\" | \"virtualcam\" | \"custom\"; rtmpUrl: string; streamKey: string; enabled: boolean; bitrate: number; audioBitrate: number; encoder: string; resolution: string; fps: number; }' is not assignable to type 'StreamDestination'.\n        Types of property 'status' are incompatible.\n          Type '\"connected\"' is not assignable to type 'StreamStatus'. Did you mean '\"disconnected\"'?"
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 1657,
+      "code": 6133,
+      "message": "'sceneId' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 1657,
+      "code": 6133,
+      "message": "'sourceId' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 1657,
+      "code": 6133,
+      "message": "'filterId' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 1658,
+      "code": 6133,
+      "message": "'sceneId' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 1658,
+      "code": 6133,
+      "message": "'sourceId' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 1658,
+      "code": 6133,
+      "message": "'filterId' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 1658,
+      "code": 6133,
+      "message": "'direction' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 1659,
+      "code": 6133,
+      "message": "'sceneId' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 1659,
+      "code": 6133,
+      "message": "'sourceId' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 1659,
+      "code": 6133,
+      "message": "'filterId' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 1659,
+      "code": 6133,
+      "message": "'settings' is declared but its value is never read."
+    },
+    {
+      "file": "src/context/NewBroadcastContext.tsx",
+      "line": 1663,
+      "code": 2740,
+      "message": "Type '{ desktopSources: DesktopSource[]; loadDesktopSources: () => Promise<void>; activeScene: string; liveScene: string; scenes: Scene[]; setScenes: Dispatch<SetStateAction<Scene[]>>; ... 111 more ...; saveStateForUndo: () => void; }' is missing the following properties from type 'BroadcastContextType': sceneCollections, activeCollectionId, clipboardSource, macros, and 4 more."
+    },
+    {
+      "file": "src/engine/CanvasRenderer.ts",
+      "line": 1,
+      "code": 2724,
+      "message": "'\"../context/NewBroadcastContext\"' has no exported member named 'Scene'. Did you mean 'SceneId'?"
+    },
+    {
+      "file": "src/engine/CanvasRenderer.ts",
+      "line": 1,
+      "code": 2305,
+      "message": "Module '\"../context/NewBroadcastContext\"' has no exported member 'Filter'."
+    },
+    {
+      "file": "src/engine/input/InputManager.ts",
+      "line": 1,
+      "code": 6196,
+      "message": "'SceneSource' is declared but never used."
+    },
+    {
+      "file": "src/engine/input/SourceRegistry.ts",
+      "line": 1,
+      "code": 2459,
+      "message": "Module '\"../../context/NewBroadcastContext\"' declares 'SceneSource' locally, but it is not exported."
+    },
+    {
+      "file": "src/engine/input/SourceRegistry.ts",
+      "line": 2,
+      "code": 6133,
+      "message": "'React' is declared but its value is never read."
+    },
+    {
+      "file": "src/engine/media/FrameSynchronizer.ts",
+      "line": 3,
+      "code": 6133,
+      "message": "'TextureCache' is declared but its value is never read."
+    },
+    {
+      "file": "src/engine/media/FrameSynchronizer.ts",
+      "line": 28,
+      "code": 6133,
+      "message": "'lastTimeUpdate' is declared but its value is never read."
+    },
+    {
+      "file": "src/engine/media/FrameSynchronizer.ts",
+      "line": 39,
+      "code": 2554,
+      "message": "Expected 0 arguments, but got 1."
+    },
+    {
+      "file": "src/engine/media/FrameSynchronizer.ts",
+      "line": 51,
+      "code": 6133,
+      "message": "'w' is declared but its value is never read."
+    },
+    {
+      "file": "src/engine/media/FrameSynchronizer.ts",
+      "line": 51,
+      "code": 6133,
+      "message": "'h' is declared but its value is never read."
+    },
+    {
+      "file": "src/engine/media/FrameSynchronizer.ts",
+      "line": 52,
+      "code": 2339,
+      "message": "Property 'addFrame' does not exist on type 'MediaCache'."
+    },
+    {
+      "file": "src/engine/media/FrameSynchronizer.ts",
+      "line": 54,
+      "code": 2339,
+      "message": "Property 'getFramesCount' does not exist on type 'MediaCache'."
+    },
+    {
+      "file": "src/engine/media/FrameSynchronizer.ts",
+      "line": 87,
+      "code": 2339,
+      "message": "Property 'hasRange' does not exist on type 'MediaCache'."
+    },
+    {
+      "file": "src/engine/media/FrameSynchronizer.ts",
+      "line": 110,
+      "code": 2576,
+      "message": "Property 'clear' does not exist on type 'MediaCache'. Did you mean to access the static member 'MediaCache.clear' instead?"
+    },
+    {
+      "file": "src/engine/media/FrameSynchronizer.ts",
+      "line": 118,
+      "code": 2339,
+      "message": "Property 'hasRange' does not exist on type 'MediaCache'."
+    },
+    {
+      "file": "src/engine/media/FrameSynchronizer.ts",
+      "line": 119,
+      "code": 2576,
+      "message": "Property 'clear' does not exist on type 'MediaCache'. Did you mean to access the static member 'MediaCache.clear' instead?"
+    },
+    {
+      "file": "src/engine/media/MediaDecoder.ts",
+      "line": 12,
+      "code": 2591,
+      "message": "Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node` and then add 'node' to the types field in your tsconfig."
+    },
+    {
+      "file": "src/engine/media/MediaDecoder.ts",
+      "line": 82,
+      "code": 6133,
+      "message": "'data' is declared but its value is never read."
+    },
+    {
+      "file": "src/engine/media/MediaEngine.ts",
+      "line": 2,
+      "code": 6133,
+      "message": "'TextureCache' is declared but its value is never read."
+    },
+    {
+      "file": "src/engine/media/MediaEngine.ts",
+      "line": 3,
+      "code": 2459,
+      "message": "Module '\"../../context/NewBroadcastContext\"' declares 'SceneSource' locally, but it is not exported."
+    },
+    {
+      "file": "src/engine/media/MediaEngine.ts",
+      "line": 29,
+      "code": 2339,
+      "message": "Property 'getAudioElement' does not exist on type 'FrameSynchronizer'."
+    },
+    {
+      "file": "src/engine/media/MediaEngine.ts",
+      "line": 35,
+      "code": 2339,
+      "message": "Property 'destroy' does not exist on type 'FrameSynchronizer'."
+    },
+    {
+      "file": "src/engine/media/MediaEngine.ts",
+      "line": 40,
+      "code": 2339,
+      "message": "Property 'getAudioElement' does not exist on type 'FrameSynchronizer'."
+    },
+    {
+      "file": "src/engine/media/MediaEngine.ts",
+      "line": 59,
+      "code": 2339,
+      "message": "Property 'destroy' does not exist on type 'FrameSynchronizer'."
+    },
+    {
+      "file": "src/engine/media/MediaEngine.ts",
+      "line": 65,
+      "code": 6133,
+      "message": "'id' is declared but its value is never read."
+    },
+    {
+      "file": "src/engine/media/MediaEngine.ts",
+      "line": 66,
+      "code": 2339,
+      "message": "Property 'destroy' does not exist on type 'FrameSynchronizer'."
+    },
+    {
+      "file": "src/engine/media/MediaPlayer.ts",
+      "line": 38,
+      "code": 2554,
+      "message": "Expected 0 arguments, but got 1."
+    },
+    {
+      "file": "src/engine/media/MediaPlayer.ts",
+      "line": 51,
+      "code": 6133,
+      "message": "'w' is declared but its value is never read."
+    },
+    {
+      "file": "src/engine/media/MediaPlayer.ts",
+      "line": 51,
+      "code": 6133,
+      "message": "'h' is declared but its value is never read."
+    },
+    {
+      "file": "src/engine/media/MediaPlayer.ts",
+      "line": 52,
+      "code": 2339,
+      "message": "Property 'addFrame' does not exist on type 'MediaCache'."
+    },
+    {
+      "file": "src/engine/media/MediaPlayer.ts",
+      "line": 55,
+      "code": 2339,
+      "message": "Property 'getFramesCount' does not exist on type 'MediaCache'."
+    },
+    {
+      "file": "src/engine/media/MediaPlayer.ts",
+      "line": 90,
+      "code": 2339,
+      "message": "Property 'hasRange' does not exist on type 'MediaCache'."
+    },
+    {
+      "file": "src/engine/media/MediaPlayer.ts",
+      "line": 113,
+      "code": 2576,
+      "message": "Property 'clear' does not exist on type 'MediaCache'. Did you mean to access the static member 'MediaCache.clear' instead?"
+    },
+    {
+      "file": "src/engine/media/MediaPlayer.ts",
+      "line": 122,
+      "code": 2339,
+      "message": "Property 'hasRange' does not exist on type 'MediaCache'."
+    },
+    {
+      "file": "src/engine/media/MediaPlayer.ts",
+      "line": 123,
+      "code": 2576,
+      "message": "Property 'clear' does not exist on type 'MediaCache'. Did you mean to access the static member 'MediaCache.clear' instead?"
+    },
+    {
+      "file": "src/engine/media/MediaPlayer.ts",
+      "line": 193,
+      "code": 2339,
+      "message": "Property 'getNewestPts' does not exist on type 'MediaCache'."
+    },
+    {
+      "file": "src/engine/media/MediaPlayer.ts",
+      "line": 195,
+      "code": 2339,
+      "message": "Property 'getOldestPts' does not exist on type 'MediaCache'."
+    },
+    {
+      "file": "src/engine/media/MediaPlayer.ts",
+      "line": 206,
+      "code": 2339,
+      "message": "Property 'getFrameAt' does not exist on type 'MediaCache'."
+    },
+    {
+      "file": "src/engine/media/MediaRenderer.ts",
+      "line": 1,
+      "code": 2459,
+      "message": "Module '\"../../context/NewBroadcastContext\"' declares 'SceneSource' locally, but it is not exported."
+    },
+    {
+      "file": "src/engine/media/MediaRenderer.ts",
+      "line": 11,
+      "code": 2339,
+      "message": "Property 'getCurrentTexture' does not exist on type 'FrameSynchronizer'."
+    },
+    {
+      "file": "src/engine/media/MediaTexture.ts",
+      "line": 2,
+      "code": 1294,
+      "message": "This syntax is not allowed when 'erasableSyntaxOnly' is enabled."
+    },
+    {
+      "file": "src/engine/MediaManager.ts",
+      "line": 1,
+      "code": 2459,
+      "message": "Module '\"../context/NewBroadcastContext\"' declares 'SceneSource' locally, but it is not exported."
+    },
+    {
+      "file": "src/engine/MediaManager.ts",
+      "line": 142,
+      "code": 6133,
+      "message": "'activeScenes' is declared but its value is never read."
+    },
+    {
+      "file": "src/engine/SceneRenderer.ts",
+      "line": 1,
+      "code": 2724,
+      "message": "'\"../context/NewBroadcastContext\"' has no exported member named 'Scene'. Did you mean 'SceneId'?"
+    },
+    {
+      "file": "src/engine/SceneRenderer.ts",
+      "line": 1,
+      "code": 2459,
+      "message": "Module '\"../context/NewBroadcastContext\"' declares 'SceneSource' locally, but it is not exported."
+    },
+    {
+      "file": "src/engine/SceneRenderer.ts",
+      "line": 88,
+      "code": 2339,
+      "message": "Property 'paused' does not exist on type 'HTMLCanvasElement | HTMLVideoElement'.\n  Property 'paused' does not exist on type 'HTMLCanvasElement'."
+    },
+    {
+      "file": "src/engine/SourceRenderer.ts",
+      "line": 1,
+      "code": 2459,
+      "message": "Module '\"../context/NewBroadcastContext\"' declares 'SceneSource' locally, but it is not exported."
+    },
+    {
+      "file": "src/engine/SourceRenderer.ts",
+      "line": 283,
+      "code": 2554,
+      "message": "Expected 7 arguments, but got 5."
+    },
+    {
+      "file": "src/engine/SourceRenderer.ts",
+      "line": 286,
+      "code": 2554,
+      "message": "Expected 7 arguments, but got 5."
+    },
+    {
+      "file": "src/engine/SourceRenderer.ts",
+      "line": 300,
+      "code": 2554,
+      "message": "Expected 7 arguments, but got 5."
+    },
+    {
+      "file": "src/engine/TextureManager.ts",
+      "line": 1,
+      "code": 2459,
+      "message": "Module '\"../context/NewBroadcastContext\"' declares 'SceneSource' locally, but it is not exported."
+    },
+    {
+      "file": "src/engine/TextureManager.ts",
+      "line": 24,
+      "code": 2339,
+      "message": "Property 'getCurrentTexture' does not exist on type 'FrameSynchronizer'."
+    },
+    {
+      "file": "src/engine/TextureManager.ts",
+      "line": 96,
+      "code": 6133,
+      "message": "'activePath' is declared but its value is never read."
+    },
+    {
+      "file": "src/engine/TextureManager.ts",
+      "line": 124,
+      "code": 6133,
+      "message": "'candidateResolutions' is declared but its value is never read."
+    },
+    {
+      "file": "src/engine/TransformManager.ts",
+      "line": 1,
+      "code": 2459,
+      "message": "Module '\"../context/NewBroadcastContext\"' declares 'SceneSource' locally, but it is not exported."
+    },
+    {
+      "file": "src/models/Scene.ts",
+      "line": 20,
+      "code": 1005,
+      "message": "']' expected."
+    },
+    {
+      "file": "src/store/broadcastStore.ts",
+      "line": 1,
+      "code": 2307,
+      "message": "Cannot find module 'zustand' or its corresponding type declarations."
+    },
+    {
+      "file": "src/store/sceneStore.ts",
+      "line": 10,
+      "code": 6133,
+      "message": "'id' is declared but its value is never read."
+    },
+    {
+      "file": "src/store/sceneStore.ts",
+      "line": 10,
+      "code": 6133,
+      "message": "'newName' is declared but its value is never read."
+    },
+    {
+      "file": "src/store/sceneStore.ts",
+      "line": 10,
+      "code": 1109,
+      "message": "Expression expected."
+    },
+    {
+      "file": "src/store/sceneStore.ts",
+      "line": 11,
+      "code": 6133,
+      "message": "'id' is declared but its value is never read."
+    },
+    {
+      "file": "src/store/sceneStore.ts",
+      "line": 11,
+      "code": 1109,
+      "message": "Expression expected."
+    },
+    {
+      "file": "src/store/sceneStore.ts",
+      "line": 12,
+      "code": 6133,
+      "message": "'id' is declared but its value is never read."
+    },
+    {
+      "file": "src/store/sceneStore.ts",
+      "line": 12,
+      "code": 6133,
+      "message": "'newIndex' is declared but its value is never read."
+    },
+    {
+      "file": "src/store/sceneStore.ts",
+      "line": 12,
+      "code": 1109,
+      "message": "Expression expected."
+    },
+    {
+      "file": "src/store/sceneStore.ts",
+      "line": 13,
+      "code": 6133,
+      "message": "'id' is declared but its value is never read."
+    },
+    {
+      "file": "src/store/sceneStore.ts",
+      "line": 13,
+      "code": 6133,
+      "message": "'isPinned' is declared but its value is never read."
+    },
+    {
+      "file": "src/store/sceneStore.ts",
+      "line": 13,
+      "code": 1109,
+      "message": "Expression expected."
+    },
+    {
+      "file": "src/store/sceneStore.ts",
+      "line": 14,
+      "code": 6133,
+      "message": "'id' is declared but its value is never read."
+    },
+    {
+      "file": "src/store/sceneStore.ts",
+      "line": 14,
+      "code": 6133,
+      "message": "'isLocked' is declared but its value is never read."
+    },
+    {
+      "file": "src/store/sceneStore.ts",
+      "line": 14,
+      "code": 1109,
+      "message": "Expression expected."
+    },
+    {
+      "file": "src/store/sceneStore.ts",
+      "line": 15,
+      "code": 1128,
+      "message": "Declaration or statement expected."
+    },
+    {
+      "file": "src/store/sceneStore.ts",
+      "line": 19,
+      "code": 2304,
+      "message": "Cannot find name 'create'."
+    },
+    {
+      "file": "src/store/sceneStore.ts",
+      "line": 19,
+      "code": 2304,
+      "message": "Cannot find name 'SceneState'."
+    },
+    {
+      "file": "src/store/sceneStore.ts",
+      "line": 20,
+      "code": 2304,
+      "message": "Cannot find name 'mockScenes'."
+    },
+    {
+      "file": "src/store/sceneStore.ts",
+      "line": 39,
+      "code": 6133,
+      "message": "'id' is declared but its value is never read."
+    },
+    {
+      "file": "src/store/sceneStore.ts",
+      "line": 39,
+      "code": 6133,
+      "message": "'newName' is declared but its value is never read."
+    },
+    {
+      "file": "src/store/sceneStore.ts",
+      "line": 40,
+      "code": 6133,
+      "message": "'scene' is declared but its value is never read."
+    },
+    {
+      "file": "src/store/sceneStore.ts",
+      "line": 40,
+      "code": 1109,
+      "message": "Expression expected."
+    },
+    {
+      "file": "src/store/sceneStore.ts",
+      "line": 40,
+      "code": 1005,
+      "message": "')' expected."
+    },
+    {
+      "file": "src/store/slices/createOutputSlice.ts",
+      "line": 1,
+      "code": 2307,
+      "message": "Cannot find module 'zustand' or its corresponding type declarations."
+    },
+    {
+      "file": "src/store/slices/createOutputSlice.ts",
+      "line": 11,
+      "code": 2344,
+      "message": "Type '\"isStreaming\" | \"startRecording\" | \"stopRecording\" | \"streamKey\" | \"streamStatus\" | \"recordingStatus\" | \"pauseRecording\" | \"isVirtualCamEnabled\" | \"toggleVirtualCam\" | \"streamUrl\" | ... 4 more ... | \"recordingTimer\"' does not satisfy the constraint 'keyof BroadcastState'.\n  Type '\"streamKey\"' is not assignable to type 'keyof BroadcastState'."
+    },
+    {
+      "file": "src/store/slices/createPlaybackSlice.ts",
+      "line": 1,
+      "code": 2307,
+      "message": "Cannot find module 'zustand' or its corresponding type declarations."
+    },
+    {
+      "file": "src/store/slices/createRoutingSlice.ts",
+      "line": 1,
+      "code": 2307,
+      "message": "Cannot find module 'zustand' or its corresponding type declarations."
+    },
+    {
+      "file": "src/store/slices/createSceneSlice.ts",
+      "line": 1,
+      "code": 2307,
+      "message": "Cannot find module 'zustand' or its corresponding type declarations."
+    },
+    {
+      "file": "src/store/slices/createSelectionSlice.ts",
+      "line": 1,
+      "code": 2307,
+      "message": "Cannot find module 'zustand' or its corresponding type declarations."
+    },
+    {
+      "file": "src/store/slices/createSourceSlice.ts",
+      "line": 1,
+      "code": 2307,
+      "message": "Cannot find module 'zustand' or its corresponding type declarations."
+    },
+    {
+      "file": "src/store/slices/createSourceSlice.ts",
+      "line": 6,
+      "code": 2741,
+      "message": "Property 'zIndex' is missing in type '{ id: `${string}-${string}-${string}-${string}-${string}`; name: string; type: string; visible: true; locked: false; x: number; y: number; width: number; height: number; opacity: number; settings: {}; filters: undefined[]; }' but required in type 'SceneSource'."
+    },
+    {
+      "file": "src/store/slices/createTransitionSlice.ts",
+      "line": 1,
+      "code": 2307,
+      "message": "Cannot find module 'zustand' or its corresponding type declarations."
+    }
+  ]
+}

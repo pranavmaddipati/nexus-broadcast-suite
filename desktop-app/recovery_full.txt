@@ -1,0 +1,29 @@
+Created At: 2026-07-21T11:37:36Z
+Tool is running as a background task with task id: ab7095fc-d8b2-4a3d-bb24-684f2a97050a/task-773
+Task Description: node -e "
+const fs = require('fs');
+const path = 'C:/Users/abhin/.gemini/antigravity-ide/brain/ab7095fc-d8b2-4a3d-bb24-684f2a97050a/.system_generated/logs/transcript_full.jsonl';
+const lines = fs.readFileSync(path, 'utf8').split('\n');
+
+for (const line of lines) {
+  if (!line) continue;
+  try {
+    const obj = JSON.parse(line);
+    
+    if (obj.content && typeof obj.content === 'string') {
+      if (obj.content.includes('SourcesPanel.tsx') && obj.content.includes('export const SourcesPanel: React.FC = () => {') && obj.content.includes('const AddSourceModal = () => {')) {
+         fs.writeFileSync('c:/broadcast-suite3/desktop-app/recovery_full.txt', obj.content);
+         console.log('Found full string match, length:', obj.content.length);
+      }
+    } else if (obj.content && Array.isArray(obj.content)) {
+      for (const item of obj.content) {
+        if (item.type === 'tool_result' && item.output && item.output.includes('SourcesPanel.tsx') && item.output.includes('export const SourcesPanel: React.FC = () => {') && item.output.includes('const AddSourceModal = () => {')) {
+           fs.writeFileSync('c:/broadcast-suite3/desktop-app/recovery_full.txt', item.output);
+           console.log('Found full tool_result match, length:', item.output.length);
+        }
+      }
+    }
+  } catch(e) {}
+}
+"
+Task logs are available at: file:///C:/Users/abhin/.gemini/antigravity-ide/brain/ab7095fc-d8b2-4a3d-bb24-684f2a97050a/.system_generated/tasks/task-773.log
